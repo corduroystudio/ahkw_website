@@ -1,0 +1,13 @@
+@function makeshadow($color, $length: 'long'){
+    $val: 0px 0px $color;
+    $len: 35;
+    
+    @if $length == 'short' {
+        $len: 2;
+    }
+    @for $i from 1 through $len {
+        $val: #{$val}, #{$i}px #{$i}px #{$color};
+    }
+    
+    @return $val;
+}

@@ -1,0 +1,257 @@
+body {
+    @include default;
+}
+
+.container {
+    max-width: 100%;
+    position: relative;
+    //padding: 0 14px;
+    //margin: 0 auto;
+//    @media screen and (min-width: 768px) {
+//        max-width: 720px;
+//    }
+//    @media screen and (min-width: 992px) {
+//        max-width: 940px;
+//    }
+//    @media screen and (min-width: 1200px) {
+//        max-width: 3140px;
+//    }
+}
+
+p {
+    @include default;
+    margin-bottom: 21px;
+    @media screen and (min-width: 992px) {
+        margin-bottom: 24px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cantarell';
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 21px;
+    text-transform: uppercase;
+    &.light {
+        font-weight: 400;
+    }
+    &.lower {
+        text-transform: none;
+    }
+}
+
+h1 {
+    font-size: $mobileFont * 2.2;
+    @media screen and (min-width: 992px) {
+        font-size: $desktopFont * 2.2;
+    }
+}
+h2 {
+    font-size: $mobileFont * 2;
+    @media screen and (min-width: 992px) {
+        font-size: $desktopFont * 2;
+    }
+}
+h3 {
+    font-size: $mobileFont * 1.8;
+    @media screen and (min-width: 992px) {
+        font-size: $desktopFont * 1.8;
+    }
+}
+h4 {
+    font-size: $mobileFont * 1.6;
+    @media screen and (min-width: 992px) {
+        font-size: $desktopFont * 1.6;
+    }
+}
+h5 {
+    font-size: $mobileFont * 1.4;
+    @media screen and (min-width: 992px) {
+        font-size: $desktopFont * 1.4;
+    }
+}
+h6 {
+    font-size: $mobileFont * 1.2;
+    @media screen and (min-width: 992px) {
+        font-size: $desktopFont * 1.2;
+    }
+}
+
+
+header {
+    background: rgba(255,255,255,0.95);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    @include navSize(415px, 'portrait', 100px);
+    @include navSize(415px, 'landscape', 80px);
+    @include navSize(768px, 'portrait', 80px, 416px);
+    @include navSize(768px, 'landscape', 80px);
+    @include navSize(768px, 'desktop', 100px);
+    & .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+div.section {
+    margin-top: $mobileFont * 4;
+    max-width: 675px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 14px;
+    @media screen and (min-width: 992px) {
+        margin-top: $desktopFont * 4;
+    }
+}
+
+.wide {
+    width: 100%;
+    margin: 0;
+}
+
+div.wrapper {
+    margin-top: $mobileFont * 4;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+a.button {
+    background: $blue;
+    color: $white;
+    padding: 14px 28px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Cantarell';
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    overflow: hidden;
+    display: inline-block;
+    text-shadow: makeshadow(darken($blue, 5%), 'short');
+    transition: text-shadow .1s;
+    &:hover {
+        background: linear-gradient(to bottom right, lighten($blue, 3%) 10%, $blue 90%, darken($blue, 5%));
+        text-shadow: makeshadow(darken($blue, 5%));
+        cursor: pointer;
+    }
+}
+
+.landing {
+    position: relative;
+    background: lighten($blue, 20%);
+    height: 100vh;
+    color: $white;
+    @media screen and (min-width: 768px) {
+        height: 600px;
+    }
+    @include landingHeight($iphoneW, $iphone4H, 'portrait'); 
+    @include landingHeight($iphoneW, $iphone4H, 'landscape'); 
+    @include landingHeight($iphoneW, $iphone5H, 'portrait'); 
+    @include landingHeight($iphoneW, $iphone5H, 'landscape'); 
+    @include landingHeight($ipadW, $ipadH, 'landscape');
+    .landingBanner {
+        background: $blue;
+        position: absolute;
+        display: table;
+        width: 100%;
+        bottom: 0;
+        height: 70px;
+        @media all and (orientation: portrait) {
+            height: 120px;
+        }
+        &.indicator {
+           @include titleBg($green, $yellow, $orange, $red); 
+        }
+        & > h4 {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+div.card {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    @include bgColor($green, $yellow, $orange, $red);
+    &:hover .grade {
+        @include longShadow($green, $yellow, $orange, $red);
+    }
+    @media screen and (min-width: 768px) {
+        width: 50%;
+        float: left;
+        height: 400px;
+    }
+    .grade {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        text-align: center;
+        color: $white;
+        font-family: 'Cantarell';
+        font-weight: 400;
+        font-size: 100px;
+        line-height: 0;
+        text-transform: uppercase;
+        transition: text-shadow .1s;
+        z-index: 10;
+        @include shortShadow($green, $yellow, $orange, $red);
+        @media screen and (min-width: 768px) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .cardTitle {
+        color: $white;
+        position: absolute;
+        display: table;
+        width: 100%;
+        bottom: 0;
+        height: 70px;
+        @include titleBg($green, $yellow, $orange, $red); 
+        & > h6 {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: left;
+            padding-left: 28px;
+            width: 75%;
+        }
+    }
+}
+
+.twitterHashtag {
+    clear: both;
+    position: relative;
+    height: 100px;
+    color: $white;
+    cursor: pointer;
+    @include bgColor($teal);
+    & > h6 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include shortShadow($teal);
+    }
+}
+
+
+
+//@include hoverGradient($blue, $green, $yellow, $orange, $red, $teal)
+
+
+

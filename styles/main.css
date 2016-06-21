@@ -1,0 +1,368 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background: #fff;
+  color: #373a3c;
+  font-family: 'Roboto Slab';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.75; }
+  @media screen and (min-width: 992px) {
+    body {
+      font-size: 16px; } }
+
+.container {
+  max-width: 100%;
+  position: relative; }
+
+p {
+  background: #fff;
+  color: #373a3c;
+  font-family: 'Roboto Slab';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 21px; }
+  @media screen and (min-width: 992px) {
+    p {
+      font-size: 16px; } }
+  @media screen and (min-width: 992px) {
+    p {
+      margin-bottom: 24px; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cantarell';
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 21px;
+  text-transform: uppercase; }
+  h1.light, h2.light, h3.light, h4.light, h5.light, h6.light {
+    font-weight: 400; }
+  h1.lower, h2.lower, h3.lower, h4.lower, h5.lower, h6.lower {
+    text-transform: none; }
+
+h1 {
+  font-size: 30.8px; }
+  @media screen and (min-width: 992px) {
+    h1 {
+      font-size: 35.2px; } }
+
+h2 {
+  font-size: 28px; }
+  @media screen and (min-width: 992px) {
+    h2 {
+      font-size: 32px; } }
+
+h3 {
+  font-size: 25.2px; }
+  @media screen and (min-width: 992px) {
+    h3 {
+      font-size: 28.8px; } }
+
+h4 {
+  font-size: 22.4px; }
+  @media screen and (min-width: 992px) {
+    h4 {
+      font-size: 25.6px; } }
+
+h5 {
+  font-size: 19.6px; }
+  @media screen and (min-width: 992px) {
+    h5 {
+      font-size: 22.4px; } }
+
+h6 {
+  font-size: 16.8px; }
+  @media screen and (min-width: 992px) {
+    h6 {
+      font-size: 19.2px; } }
+
+header {
+  background: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 100px; }
+  @media all and (min-device-width: 0px) and (max-device-width: 415px) and (orientation: portrait) {
+    header {
+      height: 100px; }
+      header .logo > img {
+        width: 94px;
+        height: 70px; } }
+  @media all and (max-device-width: 415px) and (orientation: landscape) {
+    header {
+      height: 80px; }
+      header .logo > img {
+        width: 94px;
+        height: 70px; } }
+  @media all and (min-device-width: 416px) and (max-device-width: 768px) and (orientation: portrait) {
+    header {
+      height: 80px; }
+      header .logo > img {
+        width: 94px;
+        height: 70px; } }
+  @media all and (max-device-width: 768px) and (orientation: landscape) {
+    header {
+      height: 80px; }
+      header .logo > img {
+        width: 94px;
+        height: 70px; } }
+  @media screen and (min-width: 768px) {
+    header {
+      height: 100px; } }
+  header .logo > img {
+    width: 94px;
+    height: 70px; }
+    @media screen and (min-width: 768px) {
+      header .logo > img {
+        width: 121px;
+        height: 90px; } }
+  header .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+div.section {
+  margin-top: 56px;
+  max-width: 675px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 14px; }
+  @media screen and (min-width: 992px) {
+    div.section {
+      margin-top: 64px; } }
+
+.wide {
+  width: 100%;
+  margin: 0; }
+
+div.wrapper {
+  margin-top: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+a.button {
+  background: #299ad6;
+  color: #fff;
+  padding: 14px 28px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Cantarell';
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  overflow: hidden;
+  display: inline-block;
+  text-shadow: 0px 0px #258bc1, 1px 1px #258bc1, 2px 2px #258bc1;
+  transition: text-shadow .1s; }
+  a.button:hover {
+    background: linear-gradient(to bottom right, #36a0d8 10%, #299ad6 90%, #258bc1);
+    text-shadow: 0px 0px #258bc1, 1px 1px #258bc1, 2px 2px #258bc1, 3px 3px #258bc1, 4px 4px #258bc1, 5px 5px #258bc1, 6px 6px #258bc1, 7px 7px #258bc1, 8px 8px #258bc1, 9px 9px #258bc1, 10px 10px #258bc1, 11px 11px #258bc1, 12px 12px #258bc1, 13px 13px #258bc1, 14px 14px #258bc1, 15px 15px #258bc1, 16px 16px #258bc1, 17px 17px #258bc1, 18px 18px #258bc1, 19px 19px #258bc1, 20px 20px #258bc1, 21px 21px #258bc1, 22px 22px #258bc1, 23px 23px #258bc1, 24px 24px #258bc1, 25px 25px #258bc1, 26px 26px #258bc1, 27px 27px #258bc1, 28px 28px #258bc1, 29px 29px #258bc1, 30px 30px #258bc1, 31px 31px #258bc1, 32px 32px #258bc1, 33px 33px #258bc1, 34px 34px #258bc1, 35px 35px #258bc1;
+    cursor: pointer; }
+
+.landing {
+  position: relative;
+  background: #7fc2e6;
+  height: 100vh;
+  color: #fff; }
+  @media screen and (min-width: 768px) {
+    .landing {
+      height: 600px; } }
+  @media all and (device-width: 320px) and (device-height: 480px) and (orientation: portrait) {
+    .landing {
+      height: 480px; } }
+  @media all and (device-width: 320px) and (device-height: 480px) and (orientation: landscape) {
+    .landing {
+      height: 320px; } }
+  @media all and (device-width: 320px) and (device-height: 568px) and (orientation: portrait) {
+    .landing {
+      height: 568px; } }
+  @media all and (device-width: 320px) and (device-height: 568px) and (orientation: landscape) {
+    .landing {
+      height: 320px; } }
+  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+    .landing {
+      height: 768px; } }
+  .landing .landingBanner {
+    background: #299ad6;
+    position: absolute;
+    display: table;
+    width: 100%;
+    bottom: 0;
+    height: 70px; }
+    @media all and (orientation: portrait) {
+      .landing .landingBanner {
+        height: 120px; } }
+    .landing .landingBanner.indicator.green {
+      background: #00c275; }
+    .landing .landingBanner.indicator.yellow {
+      background: #f1ba2c; }
+    .landing .landingBanner.indicator.orange {
+      background: #e96d21; }
+    .landing .landingBanner.indicator.red {
+      background: #eb342c; }
+    .landing .landingBanner > h4 {
+      display: table-cell;
+      vertical-align: middle; }
+
+div.card {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  cursor: pointer; }
+  div.card.green {
+    background: #00cc7b; }
+    div.card.green:hover {
+      z-index: 999;
+      background: linear-gradient(to bottom right, #00d17e 10%, #00cc7b 95%, #00c778);
+      box-shadow: 0px 0px 8px -2px black; }
+  div.card.yellow {
+    background: #f3c244; }
+    div.card.yellow:hover {
+      background: linear-gradient(to bottom right, #f3c449 10%, #f3c244 95%, #f3c03f);
+      z-index: 999;
+      box-shadow: 0px 0px 8px -2px black; }
+  div.card.orange {
+    background: #eb7c38; }
+    div.card.orange:hover {
+      background: linear-gradient(to bottom right, #eb7f3d 10%, #eb7c38 95%, #eb7933);
+      z-index: 999;
+      box-shadow: 0px 0px 8px -2px black; }
+  div.card.red {
+    background: #ed4a43; }
+    div.card.red:hover {
+      background: linear-gradient(to bottom right, #ed4e48 10%, #ed4a43 95%, #ed463e);
+      z-index: 999;
+      box-shadow: 0px 0px 8px -2px black; }
+  div.card:hover .grade.grade-b {
+    text-shadow: 0px 0px #00b36c, 1px 1px #00b36c, 2px 2px #00b36c, 3px 3px #00b36c, 4px 4px #00b36c, 5px 5px #00b36c, 6px 6px #00b36c, 7px 7px #00b36c, 8px 8px #00b36c, 9px 9px #00b36c, 10px 10px #00b36c, 11px 11px #00b36c, 12px 12px #00b36c, 13px 13px #00b36c, 14px 14px #00b36c, 15px 15px #00b36c, 16px 16px #00b36c, 17px 17px #00b36c, 18px 18px #00b36c, 19px 19px #00b36c, 20px 20px #00b36c, 21px 21px #00b36c, 22px 22px #00b36c, 23px 23px #00b36c, 24px 24px #00b36c, 25px 25px #00b36c, 26px 26px #00b36c, 27px 27px #00b36c, 28px 28px #00b36c, 29px 29px #00b36c, 30px 30px #00b36c, 31px 31px #00b36c, 32px 32px #00b36c, 33px 33px #00b36c, 34px 34px #00b36c, 35px 35px #00b36c; }
+  div.card:hover .grade.grade-c {
+    text-shadow: 0px 0px #f1ba2c, 1px 1px #f1ba2c, 2px 2px #f1ba2c, 3px 3px #f1ba2c, 4px 4px #f1ba2c, 5px 5px #f1ba2c, 6px 6px #f1ba2c, 7px 7px #f1ba2c, 8px 8px #f1ba2c, 9px 9px #f1ba2c, 10px 10px #f1ba2c, 11px 11px #f1ba2c, 12px 12px #f1ba2c, 13px 13px #f1ba2c, 14px 14px #f1ba2c, 15px 15px #f1ba2c, 16px 16px #f1ba2c, 17px 17px #f1ba2c, 18px 18px #f1ba2c, 19px 19px #f1ba2c, 20px 20px #f1ba2c, 21px 21px #f1ba2c, 22px 22px #f1ba2c, 23px 23px #f1ba2c, 24px 24px #f1ba2c, 25px 25px #f1ba2c, 26px 26px #f1ba2c, 27px 27px #f1ba2c, 28px 28px #f1ba2c, 29px 29px #f1ba2c, 30px 30px #f1ba2c, 31px 31px #f1ba2c, 32px 32px #f1ba2c, 33px 33px #f1ba2c, 34px 34px #f1ba2c, 35px 35px #f1ba2c; }
+  div.card:hover .grade.grade-d {
+    text-shadow: 0px 0px #e96d21, 1px 1px #e96d21, 2px 2px #e96d21, 3px 3px #e96d21, 4px 4px #e96d21, 5px 5px #e96d21, 6px 6px #e96d21, 7px 7px #e96d21, 8px 8px #e96d21, 9px 9px #e96d21, 10px 10px #e96d21, 11px 11px #e96d21, 12px 12px #e96d21, 13px 13px #e96d21, 14px 14px #e96d21, 15px 15px #e96d21, 16px 16px #e96d21, 17px 17px #e96d21, 18px 18px #e96d21, 19px 19px #e96d21, 20px 20px #e96d21, 21px 21px #e96d21, 22px 22px #e96d21, 23px 23px #e96d21, 24px 24px #e96d21, 25px 25px #e96d21, 26px 26px #e96d21, 27px 27px #e96d21, 28px 28px #e96d21, 29px 29px #e96d21, 30px 30px #e96d21, 31px 31px #e96d21, 32px 32px #e96d21, 33px 33px #e96d21, 34px 34px #e96d21, 35px 35px #e96d21; }
+  div.card:hover .grade.grade-e {
+    text-shadow: 0px 0px #eb342c, 1px 1px #eb342c, 2px 2px #eb342c, 3px 3px #eb342c, 4px 4px #eb342c, 5px 5px #eb342c, 6px 6px #eb342c, 7px 7px #eb342c, 8px 8px #eb342c, 9px 9px #eb342c, 10px 10px #eb342c, 11px 11px #eb342c, 12px 12px #eb342c, 13px 13px #eb342c, 14px 14px #eb342c, 15px 15px #eb342c, 16px 16px #eb342c, 17px 17px #eb342c, 18px 18px #eb342c, 19px 19px #eb342c, 20px 20px #eb342c, 21px 21px #eb342c, 22px 22px #eb342c, 23px 23px #eb342c, 24px 24px #eb342c, 25px 25px #eb342c, 26px 26px #eb342c, 27px 27px #eb342c, 28px 28px #eb342c, 29px 29px #eb342c, 30px 30px #eb342c, 31px 31px #eb342c, 32px 32px #eb342c, 33px 33px #eb342c, 34px 34px #eb342c, 35px 35px #eb342c; }
+  @media screen and (min-width: 768px) {
+    div.card {
+      width: 50%;
+      float: left;
+      height: 400px; } }
+  div.card .grade {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+    color: #fff;
+    font-family: 'Cantarell';
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 0;
+    text-transform: uppercase;
+    transition: text-shadow .1s;
+    z-index: 10; }
+    div.card .grade.grade-b {
+      text-shadow: 0px 0px #00b36c, 1px 1px #00b36c, 2px 2px #00b36c; }
+    div.card .grade.grade-c {
+      text-shadow: 0px 0px #f1ba2c, 1px 1px #f1ba2c, 2px 2px #f1ba2c; }
+    div.card .grade.grade-d {
+      text-shadow: 0px 0px #e96d21, 1px 1px #e96d21, 2px 2px #e96d21; }
+    div.card .grade.grade-e {
+      text-shadow: 0px 0px #eb342c, 1px 1px #eb342c, 2px 2px #eb342c; }
+    @media screen and (min-width: 768px) {
+      div.card .grade {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); } }
+  div.card .cardTitle {
+    color: #fff;
+    position: absolute;
+    display: table;
+    width: 100%;
+    bottom: 0;
+    height: 70px; }
+    div.card .cardTitle.green {
+      background: #00c275; }
+    div.card .cardTitle.yellow {
+      background: #f1ba2c; }
+    div.card .cardTitle.orange {
+      background: #e96d21; }
+    div.card .cardTitle.red {
+      background: #eb342c; }
+    div.card .cardTitle > h6 {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: left;
+      padding-left: 28px;
+      width: 75%; }
+
+.twitterHashtag {
+  clear: both;
+  position: relative;
+  height: 100px;
+  color: #fff;
+  cursor: pointer; }
+  .twitterHashtag.teal {
+    background: #00bc9e; }
+    .twitterHashtag.teal:hover {
+      background: linear-gradient(to bottom right, #00c1a2 10%, #00bc9e 95%, #00b79a); }
+  .twitterHashtag > h6 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .twitterHashtag > h6.teal {
+      text-shadow: 0px 0px #00a389, 1px 1px #00a389, 2px 2px #00a389; }
+
+/*# sourceMappingURL=main.css.map */

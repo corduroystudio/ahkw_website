@@ -1,0 +1,215 @@
+@mixin default {
+    background: $white;
+    color: $black;
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: $mobileFont;
+    line-height: 1.75;
+    @media screen and (min-width: 992px) {
+        font-size: $desktopFont;
+    }
+}
+
+@mixin navSize($deviceW, $orientation, $navH, $minW: 0px) {
+    @if $orientation == 'portrait' {
+        @media all and (min-device-width: $minW) and (max-device-width: $deviceW) and (orientation:$orientation)  {  
+            height: $navH;
+            & .logo > img {
+                width: 94px;
+                height: 70px;
+            }
+        }
+    } @else if $orientation == 'landscape'{
+        @media all and (max-device-width: $deviceW) and (orientation:$orientation)  {  
+            height: $navH;
+            & .logo > img {
+                width: 94px;
+                height: 70px;
+            }
+        }
+    } @else {
+        height: 100px;
+        @media screen and (min-width: $deviceW) {
+            height: $navH;
+        }
+        & .logo > img {
+            width: 94px;
+            height: 70px;
+            @media screen and (min-width: $deviceW) {
+                width: 121px;
+                height: 90px;
+            }
+        }
+    }
+    
+}
+
+@mixin bgColor($colors...) {
+    @each $color in $colors {
+        @if $color == $green {
+            &.green {
+                background: $green;
+                &:hover {
+                    z-index: 999;
+                    background: linear-gradient(to bottom right, lighten($green, 1%) 10%, $green 95%, darken($green, 1%));
+                    box-shadow: 0px 0px 8px -2px darken($green, 50%);
+                }
+            } 
+        } @else if $color == $yellow {
+            &.yellow {
+                background: $yellow;
+                &:hover {
+                    background: linear-gradient(to bottom right, lighten($yellow, 1%) 10%, $yellow 95%, darken($yellow, 1%));
+                    z-index: 999;
+                    box-shadow: 0px 0px 8px -2px darken($green, 50%);
+                }
+            }
+        } @else if $color == $orange {
+            &.orange {
+                background: $orange;
+                &:hover {
+                    background: linear-gradient(to bottom right, lighten($orange, 1%) 10%, $orange 95%, darken($orange, 1%));
+                    z-index: 999;
+                    box-shadow: 0px 0px 8px -2px darken($green, 50%);
+                }
+            }
+        } @else if $color == $red {
+            &.red {
+                background: $red;
+                &:hover {
+                    background: linear-gradient(to bottom right, lighten($red, 1%) 10%, $red 95%, darken($red, 1%));
+                    z-index: 999;
+                    box-shadow: 0px 0px 8px -2px darken($green, 50%);
+                }
+            }
+        } @else if $color == $teal {
+            &.teal {
+                background: $teal;
+                &:hover {
+                    background: linear-gradient(to bottom right, lighten($teal, 1%) 10%, $teal 95%, darken($teal, 1%));
+                }
+            }
+        }
+    }
+}
+
+@mixin shortShadow($colors...) {
+    @each $color in $colors {
+        @if $color == $green {
+            &.grade-b {
+                text-shadow: makeshadow(darken($green, 5%), 'short');
+            } 
+        } @else if $color == $yellow {
+            &.grade-c {
+                text-shadow: makeshadow(darken($yellow, 5%), 'short');
+            }
+        } @else if $color == $orange {
+            &.grade-d {
+                text-shadow: makeshadow(darken($orange, 5%), 'short');
+                
+            }
+        } @else if $color == $red {
+            &.grade-e {
+                text-shadow: makeshadow(darken($red, 5%), 'short');
+            }
+        } @else if $color == $teal {
+            &.teal {
+                text-shadow: makeshadow(darken($teal, 5%), 'short');
+            }
+        }
+    }
+}
+
+@mixin longShadow($colors...) {
+    @each $color in $colors {
+        @if $color == $green {
+            &.grade-b {
+                    text-shadow: makeshadow(darken($green, 5%));
+                }
+            } 
+         @else if $color == $yellow {
+            &.grade-c {
+                    text-shadow: makeshadow(darken($yellow, 5%));
+                }
+            }
+         @else if $color == $orange {
+            &.grade-d {
+                    text-shadow: makeshadow(darken($orange, 5%));
+                }
+            }
+         @else if $color == $red {
+            &.grade-e {
+                    text-shadow: makeshadow(darken($red, 5%));
+                }
+            }
+        
+    }
+}
+
+@mixin titleBg($colors...) {
+    @each $color in $colors {
+        @if $color == $green {
+            &.green {
+                    background: darken($green, 2%);
+                }
+            } 
+         @else if $color == $yellow {
+            &.yellow {
+                    background: darken($yellow, 5%);
+                }
+            }
+         @else if $color == $orange {
+            &.orange {
+                    background: darken($orange, 5%);
+                }
+            }
+         @else if $color == $red {
+            &.red {
+                    background: darken($red, 5%);
+                }
+            }
+        
+    }
+}
+
+@mixin landingHeight($deviceW, $deviceH, $orientation) {
+    @if $orientation == 'portrait' {
+        @media all and (device-width: $deviceW) and (device-height: $deviceH) and (orientation:$orientation)  {  
+            height: $deviceH;
+        }
+    } @else {
+        @media all and (device-width: $deviceW) and (device-height: $deviceH) and (orientation:$orientation)  {  
+            height: $deviceW;
+        }
+    } 
+    
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
