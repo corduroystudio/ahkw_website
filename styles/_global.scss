@@ -78,6 +78,44 @@ h6 {
     }
 }
 
+.langSetting {
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    color: $blue;
+    &.header {
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: 0;
+        padding: 24px 24px;
+        transform: translateY(-50%);
+    }
+    & a {
+        font-family: "Cantarell", sans-serif;
+        font-size: 0.8em;
+        cursor: pointer;
+        opacity: .4;
+        transition: opacity .3s;
+        display: inline-block;
+        &:nth-child(1) {
+            padding-right: 12px;
+        }
+        &:hover {
+            opacity: .9;
+        }
+        &.is-active {
+            opacity: 1;
+            &::after {
+                content: " ";
+                height: 2px;
+                background-color: $blue;
+                display: block;
+                width: 20px;
+                border-radius: 4px;
+            }
+        }
+    }
+}
 
 header {
     background: rgba(255,255,255,0.95);
@@ -96,6 +134,9 @@ header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    &.fixed {
+        position: fixed;
     }
 }
 
@@ -144,6 +185,10 @@ a.button {
         text-shadow: makeshadow(darken($blue, 5%));
         cursor: pointer;
     }
+}
+
+button:focus {
+    outline: none;
 }
 
 .landing {
@@ -248,7 +293,6 @@ div.card {
         @include shortShadow($teal);
     }
 }
-
 
 
 //@include hoverGradient($blue, $green, $yellow, $orange, $red, $teal)

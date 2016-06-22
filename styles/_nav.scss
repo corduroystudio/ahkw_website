@@ -1,0 +1,209 @@
+//Include hamburger.scss for the menu hamburger
+@import "hamburgers/_hamburgers.scss";
+
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    overflow: auto;
+    left: 0;
+    background: rgba(255,255,255,.96);
+    z-index: 999;
+    opacity: 0;
+    top: -100%;
+    @media screen and (min-width: 800px) {
+        padding-top: 80px;
+    }
+    &.is-active {
+        transform: translateY(100%);
+        opacity: 1;
+        & .menuContent > div, & .socialContent > a {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+        & .menuContent > div:nth-child(2) {
+            transition-delay: .2s;
+        }
+        & .socialContent > a {
+            transition-delay: .4s;
+        }
+    }
+    & .menuContent {
+        padding: 8px 24px 16px;
+        overflow: hidden;
+        width: 80%;
+        margin: 30px auto;
+        line-height: 1.3;
+        text-transform: uppercase;
+        font-family: "Cantarell", sans-serif;
+        letter-spacing: 1px;
+        text-align: center;
+        & > div {
+            opacity: 0;
+            transform: scale(.95) translateY(40px);
+            transition: transform 250ms cubic-bezier(.39,.575,.565,1),opacity .3s;
+        }
+        & .column {
+            display: block;
+            vertical-align: top;
+            text-align: center;
+            &::before {
+                content: " ";
+                height: 4px;
+                background-color: $blue;
+                display: block;
+                width: 40px;
+                margin: 28px auto;
+                border-radius: 4px;
+                background: $background-gradient;
+            }
+        }
+        @media screen and (min-width: 800px) {
+            & .column {
+                display: inline-block;
+                text-align: left;
+                padding-left: 140px;
+                &::before {
+                    margin: 14px 0;
+                }
+            } 
+        }
+    }
+    & a {
+        text-decoration: none;
+        color: $black;
+        display: block;
+        padding: 0 0 14px;
+        transition: color .3s;
+        &:hover {
+            color: $blue;
+            @include shortShadow($blue);
+        }
+    }
+    & .socialContent {
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        &  > a {
+            opacity: 0;
+            transform: scale(.95) translateY(40px);
+            transition: transform 250ms cubic-bezier(.39,.575,.565,1),opacity .3s;
+        }
+        @media screen and (min-width: 800px) {
+            margin-top: 40px;
+        }
+        & .social {
+            text-decoration: none;
+            color: $white;
+            display: inline-block;
+            width: 75px;
+            height: 75px;
+            line-height: 75px;
+            border-radius: 40px;
+            overflow: hidden;
+            margin: 0 10px;
+            transition: all .15s;
+            padding: 0;
+        }
+        .twitter {
+            background: $background-gradient;
+            text-shadow: shortShadow($blue);
+            &:hover {
+              text-shadow: longShadow($blue);
+            }
+        }
+    }
+    
+}
+
+footer {
+    position: relative; 
+    & .menuContent {
+        padding: 8px 24px 16px;
+        overflow: hidden;
+        width: 80%;
+        margin: 28px auto 0 auto;
+        line-height: 1.3;
+        text-transform: uppercase;
+        font-family: "Cantarell", sans-serif;
+        letter-spacing: 1px;
+        text-align: center;
+        & .column {
+            display: block;
+            vertical-align: top;
+            text-align: center;
+            &::before {
+                content: " ";
+                height: 4px;
+                background-color: $blue;
+                display: block;
+                width: 40px;
+                margin: 28px auto;
+                border-radius: 4px;
+                background: $background-gradient;
+            }
+        }
+        @media screen and (min-width: 800px) {
+            & .column {
+                display: inline-block;
+                text-align: left;
+                padding-left: 140px;
+                &::before {
+                    margin: 14px 0;
+                }
+            } 
+        }
+    }
+    & a {
+        font-size: 0.8em;
+        text-decoration: none;
+        color: $black;
+        display: block;
+        padding: 0 0 14px;
+        transition: color .3s;
+        &:hover {
+            color: $blue;
+            @include shortShadow($blue);
+        }
+    }
+    & .footerEnd {
+        margin-bottom: 12px;
+        position: relative;
+        height: 60px;
+        & .socialContent {
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            & .social {
+                text-decoration: none;
+                color: $white;
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                border-radius: 60px;
+                overflow: hidden;
+                margin: 0 10px;
+                transition: all .15s;
+                padding: 0;
+            }
+            .twitter {
+                background: $background-gradient;
+                text-shadow: shortShadow($blue);
+                &:hover {
+                  text-shadow: longShadow($blue);
+                }
+            }
+        }
+        & .copyright {
+            position: absolute;
+            left: 28px;
+            bottom: 0;
+        }
+    }
+    
+}
