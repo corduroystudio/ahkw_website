@@ -102,6 +102,7 @@ header {
 
 
 div.section {
+    clear: both;
     margin-top: $mobileFont * 4;
     max-width: 675px;
     margin-left: auto;
@@ -175,6 +176,7 @@ a.button {
         & > h4 {
             display: table-cell;
             vertical-align: middle;
+            letter-spacing: 1.2px;
         }
     }
 }
@@ -186,7 +188,7 @@ div.card {
     position: relative;
     cursor: pointer;
     @include bgColor($green, $yellow, $orange, $red);
-    &:hover .grade {
+    &:not(.indicatorPage):hover .grade {
         @include longShadow($green, $yellow, $orange, $red);
     }
     @media screen and (min-width: 768px) {
@@ -248,7 +250,6 @@ div.card {
         @include shortShadow($teal);
     }
 }
-
 
 
 //@include hoverGradient($blue, $green, $yellow, $orange, $red, $teal)

@@ -172,6 +172,7 @@ header {
     transform: translate(-50%, -50%); }
 
 div.section {
+  clear: both;
   margin-top: 56px;
   max-width: 675px;
   margin-left: auto;
@@ -254,7 +255,8 @@ a.button {
       background: #eb342c; }
     .landing .landingBanner > h4 {
       display: table-cell;
-      vertical-align: middle; }
+      vertical-align: middle;
+      letter-spacing: 1.2px; }
 
 div.card {
   height: 300px;
@@ -263,35 +265,35 @@ div.card {
   cursor: pointer; }
   div.card.green {
     background: #00cc7b; }
-    div.card.green:hover {
+    div.card.green:not(.indicatorPage):hover {
       z-index: 999;
       background: linear-gradient(to bottom right, #00d17e 10%, #00cc7b 95%, #00c778);
       box-shadow: 0px 0px 8px -2px black; }
   div.card.yellow {
     background: #f3c244; }
-    div.card.yellow:hover {
+    div.card.yellow:not(.indicatorPage):hover {
       background: linear-gradient(to bottom right, #f3c449 10%, #f3c244 95%, #f3c03f);
       z-index: 999;
       box-shadow: 0px 0px 8px -2px black; }
   div.card.orange {
     background: #eb7c38; }
-    div.card.orange:hover {
+    div.card.orange:not(.indicatorPage):hover {
       background: linear-gradient(to bottom right, #eb7f3d 10%, #eb7c38 95%, #eb7933);
       z-index: 999;
       box-shadow: 0px 0px 8px -2px black; }
   div.card.red {
     background: #ed4a43; }
-    div.card.red:hover {
+    div.card.red:not(.indicatorPage):hover {
       background: linear-gradient(to bottom right, #ed4e48 10%, #ed4a43 95%, #ed463e);
       z-index: 999;
       box-shadow: 0px 0px 8px -2px black; }
-  div.card:hover .grade.grade-b {
+  div.card:not(.indicatorPage):hover .grade.grade-b {
     text-shadow: 0px 0px #00b36c, 1px 1px #00b36c, 2px 2px #00b36c, 3px 3px #00b36c, 4px 4px #00b36c, 5px 5px #00b36c, 6px 6px #00b36c, 7px 7px #00b36c, 8px 8px #00b36c, 9px 9px #00b36c, 10px 10px #00b36c, 11px 11px #00b36c, 12px 12px #00b36c, 13px 13px #00b36c, 14px 14px #00b36c, 15px 15px #00b36c, 16px 16px #00b36c, 17px 17px #00b36c, 18px 18px #00b36c, 19px 19px #00b36c, 20px 20px #00b36c, 21px 21px #00b36c, 22px 22px #00b36c, 23px 23px #00b36c, 24px 24px #00b36c, 25px 25px #00b36c, 26px 26px #00b36c, 27px 27px #00b36c, 28px 28px #00b36c, 29px 29px #00b36c, 30px 30px #00b36c, 31px 31px #00b36c, 32px 32px #00b36c, 33px 33px #00b36c, 34px 34px #00b36c, 35px 35px #00b36c; }
-  div.card:hover .grade.grade-c {
+  div.card:not(.indicatorPage):hover .grade.grade-c {
     text-shadow: 0px 0px #f1ba2c, 1px 1px #f1ba2c, 2px 2px #f1ba2c, 3px 3px #f1ba2c, 4px 4px #f1ba2c, 5px 5px #f1ba2c, 6px 6px #f1ba2c, 7px 7px #f1ba2c, 8px 8px #f1ba2c, 9px 9px #f1ba2c, 10px 10px #f1ba2c, 11px 11px #f1ba2c, 12px 12px #f1ba2c, 13px 13px #f1ba2c, 14px 14px #f1ba2c, 15px 15px #f1ba2c, 16px 16px #f1ba2c, 17px 17px #f1ba2c, 18px 18px #f1ba2c, 19px 19px #f1ba2c, 20px 20px #f1ba2c, 21px 21px #f1ba2c, 22px 22px #f1ba2c, 23px 23px #f1ba2c, 24px 24px #f1ba2c, 25px 25px #f1ba2c, 26px 26px #f1ba2c, 27px 27px #f1ba2c, 28px 28px #f1ba2c, 29px 29px #f1ba2c, 30px 30px #f1ba2c, 31px 31px #f1ba2c, 32px 32px #f1ba2c, 33px 33px #f1ba2c, 34px 34px #f1ba2c, 35px 35px #f1ba2c; }
-  div.card:hover .grade.grade-d {
+  div.card:not(.indicatorPage):hover .grade.grade-d {
     text-shadow: 0px 0px #e96d21, 1px 1px #e96d21, 2px 2px #e96d21, 3px 3px #e96d21, 4px 4px #e96d21, 5px 5px #e96d21, 6px 6px #e96d21, 7px 7px #e96d21, 8px 8px #e96d21, 9px 9px #e96d21, 10px 10px #e96d21, 11px 11px #e96d21, 12px 12px #e96d21, 13px 13px #e96d21, 14px 14px #e96d21, 15px 15px #e96d21, 16px 16px #e96d21, 17px 17px #e96d21, 18px 18px #e96d21, 19px 19px #e96d21, 20px 20px #e96d21, 21px 21px #e96d21, 22px 22px #e96d21, 23px 23px #e96d21, 24px 24px #e96d21, 25px 25px #e96d21, 26px 26px #e96d21, 27px 27px #e96d21, 28px 28px #e96d21, 29px 29px #e96d21, 30px 30px #e96d21, 31px 31px #e96d21, 32px 32px #e96d21, 33px 33px #e96d21, 34px 34px #e96d21, 35px 35px #e96d21; }
-  div.card:hover .grade.grade-e {
+  div.card:not(.indicatorPage):hover .grade.grade-e {
     text-shadow: 0px 0px #eb342c, 1px 1px #eb342c, 2px 2px #eb342c, 3px 3px #eb342c, 4px 4px #eb342c, 5px 5px #eb342c, 6px 6px #eb342c, 7px 7px #eb342c, 8px 8px #eb342c, 9px 9px #eb342c, 10px 10px #eb342c, 11px 11px #eb342c, 12px 12px #eb342c, 13px 13px #eb342c, 14px 14px #eb342c, 15px 15px #eb342c, 16px 16px #eb342c, 17px 17px #eb342c, 18px 18px #eb342c, 19px 19px #eb342c, 20px 20px #eb342c, 21px 21px #eb342c, 22px 22px #eb342c, 23px 23px #eb342c, 24px 24px #eb342c, 25px 25px #eb342c, 26px 26px #eb342c, 27px 27px #eb342c, 28px 28px #eb342c, 29px 29px #eb342c, 30px 30px #eb342c, 31px 31px #eb342c, 32px 32px #eb342c, 33px 33px #eb342c, 34px 34px #eb342c, 35px 35px #eb342c; }
   @media screen and (min-width: 768px) {
     div.card {
@@ -364,5 +366,411 @@ div.card {
     transform: translate(-50%, -50%); }
     .twitterHashtag > h6.teal {
       text-shadow: 0px 0px #00a389, 1px 1px #00a389, 2px 2px #00a389; }
+
+.landing.homePage {
+  background: url(/media/images/pic4.jpg);
+  background-repeat: no-repeat; }
+
+div.wrapper.homePage {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%); }
+  div.wrapper.homePage > a {
+    width: 240px; }
+
+.keyIndicators {
+  background: #299ad6;
+  margin-top: 100px;
+  color: #fff;
+  height: 80px;
+  position: relative; }
+  .keyIndicators h4 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.readMoreHome {
+  clear: both;
+  color: #fff;
+  position: relative;
+  height: 250px;
+  cursor: pointer; }
+  .readMoreHome.blue {
+    background: #299ad6; }
+    .readMoreHome.blue:hover {
+      background: linear-gradient(to bottom right, #2d9cd7 10%, #299ad6 95%, #2897d2); }
+  @media screen and (min-width: 768px) {
+    .readMoreHome {
+      height: 300px; } }
+  .readMoreHome > h5 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px; }
+    .readMoreHome > h5.blue {
+      text-shadow: 0px 0px #258bc1, 1px 1px #258bc1, 2px 2px #258bc1; }
+
+.container.rc .landing.rcPage {
+  background: url(/media/images/pic2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 5% 18%; }
+.container.rc .rcCard {
+  width: 100%;
+  margin-top: 56px; }
+  @media screen and (min-width: 768px) {
+    .container.rc .rcCard {
+      width: 50%;
+      float: left; } }
+.container.rc .dlReport16 {
+  color: #fff;
+  position: relative;
+  height: 200px;
+  cursor: pointer; }
+  .container.rc .dlReport16.blue {
+    background: #299ad6; }
+    .container.rc .dlReport16.blue:hover {
+      background: linear-gradient(to bottom right, #2d9cd7 10%, #299ad6 95%, #2897d2); }
+  @media screen and (min-width: 768px) {
+    .container.rc .dlReport16 {
+      height: 250px; } }
+  .container.rc .dlReport16 > h5 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; }
+    .container.rc .dlReport16 > h5.blue {
+      text-shadow: 0px 0px #258bc1, 1px 1px #258bc1, 2px 2px #258bc1; }
+.container.rc .dlReport14 {
+  color: #fff;
+  position: relative;
+  height: 150px;
+  cursor: pointer; }
+  .container.rc .dlReport14.lightBlue {
+    background: #51aede; }
+    .container.rc .dlReport14.lightBlue:hover {
+      background: linear-gradient(to bottom right, #55b0df 10%, #51aede 95%, #4dacdd); }
+  @media screen and (min-width: 768px) {
+    .container.rc .dlReport14 {
+      height: 200px; } }
+  .container.rc .dlReport14 > h5 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; }
+    .container.rc .dlReport14 > h5.lightBlue {
+      text-shadow: 0px 0px #3ca4da, 1px 1px #3ca4da, 2px 2px #3ca4da; }
+.container.rc .card.link {
+  height: 300px; }
+  @media screen and (min-width: 768px) {
+    .container.rc .card.link {
+      height: 450px;
+      margin-top: 56px; } }
+.container.rc ol.aimList > li {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 140px; }
+  @media screen and (min-width: 768px) {
+    .container.rc ol.aimList > li {
+      width: 85%; } }
+  .container.rc ol.aimList > li > span {
+    width: 20%;
+    float: left;
+    color: #299ad6;
+    font-size: 60px;
+    line-height: 1;
+    font-family: 'Cantarell';
+    font-weight: 400;
+    text-align: left; }
+    @media screen and (min-width: 550px) and (max-width: 768px) {
+      .container.rc ol.aimList > li > span {
+        text-align: center; } }
+    @media screen and (min-width: 768px) {
+      .container.rc ol.aimList > li > span {
+        width: 15%;
+        font-size: 70px;
+        text-align: left; } }
+  .container.rc ol.aimList > li > p {
+    width: 80%;
+    float: left; }
+    @media screen and (min-width: 768px) {
+      .container.rc ol.aimList > li > p {
+        width: 85%; } }
+
+.card.indicatorPage {
+  width: 100%;
+  height: 100%;
+  cursor: default; }
+  .card.indicatorPage .cardTitle > h6 {
+    text-align: center;
+    width: 100%; }
+
+.card.nextIndicator {
+  width: 100%; }
+
+span.underline {
+  text-decoration: underline;
+  font-weight: 700; }
+
+.indicatorExpand {
+  margin-top: 140px; }
+
+div.expand {
+  height: 80px;
+  position: relative;
+  color: #fff;
+  cursor: pointer; }
+  div.expand.darkBlue {
+    background: #0086cb; }
+    div.expand.darkBlue:hover {
+      background: linear-gradient(to bottom right, #0089d0 10%, #0086cb 95%, #0083c6); }
+  div.expand.blue {
+    background: #299ad6; }
+    div.expand.blue:hover {
+      background: linear-gradient(to bottom right, #2d9cd7 10%, #299ad6 95%, #2897d2); }
+  div.expand.lightBlue {
+    background: #51aede; }
+    div.expand.lightBlue:hover {
+      background: linear-gradient(to bottom right, #55b0df 10%, #51aede 95%, #4dacdd); }
+  div.expand.xtraDarkBlue {
+    background: #00679e; }
+    div.expand.xtraDarkBlue:hover {
+      background: linear-gradient(to bottom right, #006aa3 10%, #00679e 95%, #006499); }
+  div.expand > h5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; }
+    div.expand > h5.darkBlue {
+      text-shadow: 0px 0px #0075b2, 1px 1px #0075b2, 2px 2px #0075b2; }
+    div.expand > h5.blue {
+      text-shadow: 0px 0px #258bc1, 1px 1px #258bc1, 2px 2px #258bc1; }
+    div.expand > h5.lightBlue {
+      text-shadow: 0px 0px #3ca4da, 1px 1px #3ca4da, 2px 2px #3ca4da; }
+    div.expand > h5.xtraDarkBlue {
+      text-shadow: 0px 0px #005685, 1px 1px #005685, 2px 2px #005685; }
+
+div.expandContent {
+  display: none; }
+
+div.expandContent.open {
+  display: block;
+  color: #fff; }
+  div.expandContent.open > ul, div.expandContent.open > p {
+    padding: 14px 0 46px 0;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (min-width: 1200px) {
+      div.expandContent.open > ul, div.expandContent.open > p {
+        width: 55%; } }
+  div.expandContent.open > ul {
+    list-style: disc inside; }
+    div.expandContent.open > ul:before {
+      content: attr(aria-label);
+      font-size: 19.6px;
+      font-weight: 700; }
+    div.expandContent.open > ul > li {
+      padding-bottom: 28px; }
+    div.expandContent.open > ul.indent {
+      width: 50%; }
+      @media screen and (min-width: 768px) {
+        div.expandContent.open > ul.indent {
+          width: 30%; } }
+      div.expandContent.open > ul.indent > li {
+        padding-top: 14px;
+        padding-bottom: 0; }
+
+div.expandContent.grade, div.expandContent.grade > p {
+  background: #00679e;
+  color: #fff;
+  margin-bottom: 0; }
+
+div.expandContent.considerations {
+  background: #0086cb; }
+
+div.expandContent.improve {
+  background: #299ad6; }
+
+div.expandContent.sources {
+  background: #51aede; }
+
+.landing.aboutPage {
+  background: url(/media/images/twitter_banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+ul.expertGroup {
+  width: 100%;
+  margin-left: auto;
+  padding-top: 28px; }
+  @media screen and (min-width: 450px) and (max-width: 600px) {
+    ul.expertGroup {
+      width: 90%; } }
+  @media screen and (min-width: 600px) and (max-width: 650px) {
+    ul.expertGroup {
+      width: 80%; } }
+  @media screen and (min-width: 650px) {
+    ul.expertGroup {
+      width: 75%; } }
+  ul.expertGroup > li {
+    width: 100%; }
+    ul.expertGroup > li div.profilePic {
+      height: 100px;
+      float: left; }
+      ul.expertGroup > li div.profilePic#gareth {
+        background: url(/media/images/gareth.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px; }
+      ul.expertGroup > li div.profilePic#simon {
+        background: url(/media/images/simon.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px; }
+      ul.expertGroup > li div.profilePic#sue {
+        background: url(/media/images/sue.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px; }
+      ul.expertGroup > li div.profilePic#joanne {
+        background: url(/media/images/joanne.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px; }
+      ul.expertGroup > li div.profilePic#marianne {
+        background: url(/media/images/marianne.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px; }
+      ul.expertGroup > li div.profilePic#robert {
+        background: url(/media/images/robert.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px; }
+    ul.expertGroup > li div.profile {
+      padding-left: 14px;
+      float: left;
+      width: 60%; }
+      @media screen and (min-width: 650px) {
+        ul.expertGroup > li div.profile {
+          width: 70%;
+          padding-left: 46px; } }
+      ul.expertGroup > li div.profile > p.name {
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-top: 14px; }
+      ul.expertGroup > li div.profile > p.uni {
+        font-size: 14.4px;
+        margin-bottom: 56px; }
+
+div.section.ack {
+  margin-top: 140px; }
+
+div.section.tweets {
+  padding: 0; }
+
+ul.acknowledgements {
+  padding-top: 28px; }
+  ul.acknowledgements li {
+    align-content: center;
+    margin-left: auto;
+    width: 70%; }
+    @media screen and (min-width: 600px) {
+      ul.acknowledgements li {
+        display: inline-block;
+        width: 40%;
+        padding-left: 9%; } }
+    ul.acknowledgements li > div.profile > p.name {
+      font-weight: 700;
+      margin-bottom: 0;
+      margin-top: 14px; }
+    ul.acknowledgements li > div.profile > p.uni {
+      font-size: 14.4px;
+      margin-bottom: 42px; }
+
+div.wide.supportLogos {
+  margin-top: 140px; }
+  div.wide.supportLogos > h2 {
+    clear: both; }
+  div.wide.supportLogos > .logos {
+    padding-top: 28px; }
+    @media screen and (min-width: 1000px) {
+      div.wide.supportLogos > .logos {
+        text-align: center; } }
+    div.wide.supportLogos > .logos .logo {
+      height: 150px;
+      width: 150px;
+      margin-left: auto;
+      margin-right: auto; }
+      div.wide.supportLogos > .logos .logo#swanseaUni {
+        background: url(/media/images/swanseaUni.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; }
+      div.wide.supportLogos > .logos .logo#southWalesUni {
+        background: url(/media/images/southWalesUni.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; }
+      div.wide.supportLogos > .logos .logo#cardiffMetUni {
+        background: url(/media/images/cardiffMetUni.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; }
+      div.wide.supportLogos > .logos .logo#glyndwrUni {
+        background: url(/media/images/glyndwrUni.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; }
+      div.wide.supportLogos > .logos .logo#sportWales {
+        background: url(/media/images/sportWales.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; }
+      @media screen and (min-width: 970px) and (max-width: 1200px) {
+        div.wide.supportLogos > .logos .logo {
+          display: inline-block;
+          margin: 10px 20px; } }
+      @media screen and (min-width: 1200px) {
+        div.wide.supportLogos > .logos .logo {
+          margin: 10px 40px;
+          display: inline-block; } }
+
+div.twitterFeed {
+  padding-top: 28px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto; }
 
 /*# sourceMappingURL=main.css.map */

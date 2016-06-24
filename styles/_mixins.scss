@@ -49,7 +49,7 @@
         @if $color == $green {
             &.green {
                 background: $green;
-                &:hover {
+                &:not(.indicatorPage):hover {
                     z-index: 999;
                     background: linear-gradient(to bottom right, lighten($green, 1%) 10%, $green 95%, darken($green, 1%));
                     box-shadow: 0px 0px 8px -2px darken($green, 50%);
@@ -58,7 +58,7 @@
         } @else if $color == $yellow {
             &.yellow {
                 background: $yellow;
-                &:hover {
+                &:not(.indicatorPage):hover {
                     background: linear-gradient(to bottom right, lighten($yellow, 1%) 10%, $yellow 95%, darken($yellow, 1%));
                     z-index: 999;
                     box-shadow: 0px 0px 8px -2px darken($green, 50%);
@@ -67,7 +67,7 @@
         } @else if $color == $orange {
             &.orange {
                 background: $orange;
-                &:hover {
+                &:not(.indicatorPage):hover {
                     background: linear-gradient(to bottom right, lighten($orange, 1%) 10%, $orange 95%, darken($orange, 1%));
                     z-index: 999;
                     box-shadow: 0px 0px 8px -2px darken($green, 50%);
@@ -76,7 +76,7 @@
         } @else if $color == $red {
             &.red {
                 background: $red;
-                &:hover {
+                &:not(.indicatorPage):hover {
                     background: linear-gradient(to bottom right, lighten($red, 1%) 10%, $red 95%, darken($red, 1%));
                     z-index: 999;
                     box-shadow: 0px 0px 8px -2px darken($green, 50%);
@@ -87,6 +87,34 @@
                 background: $teal;
                 &:hover {
                     background: linear-gradient(to bottom right, lighten($teal, 1%) 10%, $teal 95%, darken($teal, 1%));
+                }
+            }
+        } @else if $color == $blue {
+            &.blue {
+                background: $blue;
+                &:hover {
+                    background: linear-gradient(to bottom right, lighten($blue, 1%) 10%, $blue 95%, darken($blue, 1%));
+                }
+            }
+        } @else if $color == $lightBlue {
+            &.lightBlue {
+                background: $lightBlue;
+                &:hover {
+                    background: linear-gradient(to bottom right, lighten($lightBlue, 1%) 10%, $lightBlue 95%, darken($lightBlue, 1%));
+                }
+            }
+        } @else if $color == $darkBlue {
+            &.darkBlue {
+                background: $darkBlue;
+                &:hover {
+                    background: linear-gradient(to bottom right, lighten($darkBlue, 1%) 10%, $darkBlue 95%, darken($darkBlue, 1%));
+                }
+            }
+        } @else if $color == $xtraDarkBlue {
+            &.xtraDarkBlue {
+                background: $xtraDarkBlue;
+                &:hover {
+                    background: linear-gradient(to bottom right, lighten($xtraDarkBlue, 1%) 10%, $xtraDarkBlue 95%, darken($xtraDarkBlue, 1%));
                 }
             }
         }
@@ -116,7 +144,24 @@
             &.teal {
                 text-shadow: makeshadow(darken($teal, 5%), 'short');
             }
+        } @else if $color == $blue {
+            &.blue {
+                text-shadow: makeshadow(darken($blue, 5%), 'short');
+            }
+        } @else if $color == $lightBlue {
+            &.lightBlue {
+                text-shadow: makeshadow(darken($lightBlue, 5%), 'short');
+            }
+        } @else if $color == $darkBlue {
+            &.darkBlue {
+                text-shadow: makeshadow(darken($darkBlue, 5%), 'short');
+            }
+        } @else if $color == $xtraDarkBlue {
+            &.xtraDarkBlue {
+                text-shadow: makeshadow(darken($xtraDarkBlue, 5%), 'short');
+            }
         }
+        
     }
 }
 
@@ -186,6 +231,30 @@
 }
     
     
+@mixin profilePic($members...) {
+    @each $member in $members {
+        &##{$member} {
+            background: url(/media/images/#{$member}.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+@mixin orgLogos($organisations...) {
+    @each $organisation in $organisations {
+        &##{$organisation} {
+            background: url(/media/images/#{$organisation}.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
     
     
     
