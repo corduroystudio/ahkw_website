@@ -1,0 +1,51 @@
+.landing.homePage {
+    background: url(/media/images/pic4.jpg);
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+}
+
+div.wrapper.homePage {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    & > a {
+        width: 240px;
+    }
+}
+
+.keyIndicators {
+    background: $blue;
+    margin-top: 100px;
+    color: $white;
+    height: 80px;
+    position: relative;
+    & h4 {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.readMoreHome {
+    clear: both;
+    color: $white;
+    position: relative;
+    height: 250px;
+    cursor: pointer;
+    @include bgColor($blue);
+    @media screen and (min-width: 768px) {
+        height: 300px;
+    }
+    & > h5 {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+        @include shortShadow($blue);
+    }
+}

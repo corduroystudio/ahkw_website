@@ -1,0 +1,103 @@
+.container.rc {
+    
+    .landing.rcPage {
+        background: url(/media/images/pic2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 5% 18%;
+    }
+
+    .rcCard {
+        width: 100%;
+        margin-top: 56px;
+        @media screen and (min-width: 768px) {
+            width: 50%;
+            float: left;
+        }
+    }
+
+    .dlReport16 {
+        color: $white;
+        position: relative;
+        height: 200px;
+        cursor: pointer;
+        @include bgColor($blue);
+        @media screen and (min-width: 768px) {
+            height: 250px;
+        }
+        & > h5 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            @include shortShadow($blue);
+        }
+    }
+
+    .dlReport14 {
+        color: $white;
+        position: relative;
+        height: 150px;
+        cursor: pointer;
+        @include bgColor($lightBlue);
+        @media screen and (min-width: 768px) {
+            height: 200px;
+        }
+        & > h5 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            @include shortShadow($lightBlue);
+        }
+    }
+
+    .card.link {
+        height: 300px;
+        @media screen and (min-width: 768px) {
+            height: 450px;
+            margin-top: 56px;
+        }
+    }
+
+    ol.aimList > li {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 140px;
+        @media screen and (min-width: 768px) {
+            width: 85%;
+        }
+        & > span {
+            width: 20%;
+            float: left;
+            color: $blue;
+            font-size: 60px;
+            line-height: 1;
+            font-family: 'Cantarell';
+            font-weight: 400;
+            text-align: left;
+            @media screen and (min-width: 550px) and (max-width: 768px) {
+                text-align: center;
+            }
+            @media screen and (min-width: 768px) {
+                width: 15%;
+                font-size: 70px;
+                text-align: left;
+            }
+        }
+        & > p {
+            width: 80%;
+            float: left;
+            @media screen and (min-width: 768px) {
+                width: 85%;
+            }
+        }
+
+    } 
+}
+
