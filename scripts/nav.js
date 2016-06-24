@@ -21,6 +21,9 @@ $(document).ready(function() {
         $(this).children().toggleClass('is-active');
     });
     
+    $('.ui-BackToTop').on('click', function() {
+        $('html, body').animate({scrollTop: 0}, 400)
+    });
     
                   
               
