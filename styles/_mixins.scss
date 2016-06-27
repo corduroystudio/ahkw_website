@@ -49,6 +49,11 @@
         @if $color == $green {
             &.green {
                 background: $green;
+                &.inView {
+                    z-index: 999;
+                    background: linear-gradient(to bottom right, lighten($green, 1%) 10%, $green 95%, darken($green, 1%));
+                    box-shadow: 0px 0px 8px -2px darken($green, 50%); 
+                }
                 &:not(.indicatorPage):hover {
                     z-index: 999;
                     background: linear-gradient(to bottom right, lighten($green, 1%) 10%, $green 95%, darken($green, 1%));
@@ -58,6 +63,11 @@
         } @else if $color == $yellow {
             &.yellow {
                 background: $yellow;
+                &.inView {
+                    z-index: 999;
+                    background: linear-gradient(to bottom right, lighten($yellow, 1%) 10%, $yellow 95%, darken($yellow, 1%));
+                    box-shadow: 0px 0px 8px -2px darken($yellow, 50%); 
+                }
                 &:not(.indicatorPage):hover {
                     background: linear-gradient(to bottom right, lighten($yellow, 1%) 10%, $yellow 95%, darken($yellow, 1%));
                     z-index: 999;
@@ -67,6 +77,11 @@
         } @else if $color == $orange {
             &.orange {
                 background: $orange;
+                &.inView {
+                    z-index: 999;
+                    background: linear-gradient(to bottom right, lighten($orange, 1%) 10%, $orange 95%, darken($orange, 1%));
+                    box-shadow: 0px 0px 8px -2px darken($orange, 50%); 
+                }
                 &:not(.indicatorPage):hover {
                     background: linear-gradient(to bottom right, lighten($orange, 1%) 10%, $orange 95%, darken($orange, 1%));
                     z-index: 999;
@@ -76,6 +91,11 @@
         } @else if $color == $red {
             &.red {
                 background: $red;
+                &.inView {
+                    z-index: 999;
+                    background: linear-gradient(to bottom right, lighten($red, 1%) 10%, $red 95%, darken($red, 1%));
+                    box-shadow: 0px 0px 8px -2px darken($red, 50%); 
+                }
                 &:not(.indicatorPage):hover {
                     background: linear-gradient(to bottom right, lighten($red, 1%) 10%, $red 95%, darken($red, 1%));
                     z-index: 999;
