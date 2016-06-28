@@ -189,22 +189,22 @@
     @each $color in $colors {
         @if $color == $green {
             &.grade-b {
-                    text-shadow: makeshadow(darken($green, 5%));
+                    text-shadow: fadeshadow(darken($green, 5%));
                 }
             } 
          @else if $color == $yellow {
             &.grade-c {
-                    text-shadow: makeshadow(darken($yellow, 5%));
+                    text-shadow: fadeshadow(darken($yellow, 5%));
                 }
             }
          @else if $color == $orange {
             &.grade-d {
-                    text-shadow: makeshadow(darken($orange, 5%));
+                    text-shadow: fadeshadow(darken($orange, 5%));
                 }
             }
          @else if $color == $red {
             &.grade-e {
-                    text-shadow: makeshadow(darken($red, 5%));
+                    text-shadow: fadeshadow(darken($red, 5%));
                 }
             }
         
@@ -276,7 +276,31 @@
     }
 }
     
-    
+@mixin iconShadow($colors...) {
+    @each $color in $colors {
+        @if $color == $green {
+            &.green {
+                    filter: drop-shadow(5px 5px 8px darken($green, 5%));
+                }
+            } 
+         @else if $color == $yellow {
+            &.yellow {
+                    filter: drop-shadow(5px 5px 8px darken($yellow, 5%));
+                }
+            }
+         @else if $color == $orange {
+            &.orange {
+                    filter: drop-shadow(5px 5px 8px darken($orange, 5%));
+                }
+            }
+         @else if $color == $red {
+            &.red {
+                    filter: drop-shadow(5px 5px 8px darken($red, 5%));
+                }
+            }
+        
+    }
+}    
     
     
     

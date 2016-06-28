@@ -17,10 +17,13 @@ $(document).ready(function() {
         
         if ($(this).next().hasClass('open')) {
             $(this).next().removeClass('open');
+            $('div.rotate').removeClass('rotate');
             scrollToView($(this));
         } else {
             $('.expandContent.open').removeClass('open');
             $(this).next().addClass('open');
+            $('div.rotate').removeClass('rotate');
+            $(this).children().children('div').addClass('rotate');
             scrollToView($(this));
         }
        

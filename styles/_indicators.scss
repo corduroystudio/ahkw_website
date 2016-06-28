@@ -40,6 +40,20 @@ div.expand {
         @include shortShadow($blue);
         @include shortShadow($lightBlue);
         @include shortShadow($xtraDarkBlue);
+        & > div {
+            background: url(/media/icons/uiarrow-accordion.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            margin-right: 10px;
+            &.rotate {
+                transform: rotate(90deg);
+                transform-origin: center center;
+            }
+        }
     }
 }
 
