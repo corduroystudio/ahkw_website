@@ -12,7 +12,7 @@ $(document).ready(function() {
            
         var elemTop = element.offset().top;
         var elemBottom = elemTop + element.height();
-        var enterView = docViewTop + 400;
+        var enterView = docViewTop + 450;
 
         //console.log(elemBottom);
         //console.log(enterView);

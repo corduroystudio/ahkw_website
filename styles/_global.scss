@@ -10,15 +10,15 @@ body.nav-open {
     position: relative;
     //padding: 0 14px;
     //margin: 0 auto;
-//    @media screen and (min-width: 768px) {
-//        max-width: 720px;
-//    }
-//    @media screen and (min-width: 992px) {
-//        max-width: 940px;
-//    }
-//    @media screen and (min-width: 1200px) {
-//        max-width: 3140px;
-//    }
+    //    @media screen and (min-width: 768px) {
+    //        max-width: 720px;
+    //    }
+    //    @media screen and (min-width: 992px) {
+    //        max-width: 940px;
+    //    }
+    //    @media screen and (min-width: 1200px) {
+    //        max-width: 3140px;
+    //    }
 }
 
 p {
@@ -29,7 +29,12 @@ p {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Cantarell';
     font-weight: 700;
     line-height: 1.2;
@@ -49,31 +54,39 @@ h1 {
     @media screen and (min-width: 992px) {
         font-size: $desktopFont * 2.2;
     }
+    @media screen and (max-width: 360px) {
+        font-size: $mobileFont * 1.8;
+    }
 }
+
 h2 {
     font-size: $mobileFont * 2;
     @media screen and (min-width: 992px) {
         font-size: $desktopFont * 2;
     }
 }
+
 h3 {
     font-size: $mobileFont * 1.8;
     @media screen and (min-width: 992px) {
         font-size: $desktopFont * 1.8;
     }
 }
+
 h4 {
     font-size: $mobileFont * 1.6;
     @media screen and (min-width: 992px) {
         font-size: $desktopFont * 1.6;
     }
 }
+
 h5 {
     font-size: $mobileFont * 1.4;
     @media screen and (min-width: 992px) {
         font-size: $desktopFont * 1.4;
     }
 }
+
 h6 {
     font-size: $mobileFont * 1.2;
     @media screen and (min-width: 992px) {
@@ -121,7 +134,7 @@ h6 {
 }
 
 header {
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
     position: absolute;
     top: 0;
     left: 0;
@@ -142,8 +155,6 @@ header {
         position: fixed;
     }
 }
-
-
 
 div.section {
     clear: both;
@@ -203,10 +214,10 @@ button:focus {
     @media screen and (min-width: 768px) {
         height: 600px;
     }
-    @include landingHeight($iphoneW, $iphone4H, 'portrait'); 
-    @include landingHeight($iphoneW, $iphone4H, 'landscape'); 
-    @include landingHeight($iphoneW, $iphone5H, 'portrait'); 
-    @include landingHeight($iphoneW, $iphone5H, 'landscape'); 
+    @include landingHeight($iphoneW, $iphone4H, 'portrait');
+    @include landingHeight($iphoneW, $iphone4H, 'landscape');
+    @include landingHeight($iphoneW, $iphone5H, 'portrait');
+    @include landingHeight($iphoneW, $iphone5H, 'landscape');
     @include landingHeight($ipadW, $ipadH, 'landscape');
     .landingBanner {
         background: $blue;
@@ -219,7 +230,7 @@ button:focus {
             height: 120px;
         }
         &.indicator {
-           @include titleBg($green, $yellow, $orange, $red); 
+            @include titleBg($green, $yellow, $orange, $red);
         }
         & > h4 {
             display: table-cell;
@@ -228,7 +239,6 @@ button:focus {
         }
     }
 }
-
 
 div.card {
     height: 300px;
@@ -278,7 +288,7 @@ div.card {
         width: 100%;
         bottom: 0;
         height: 70px;
-        @include titleBg($green, $yellow, $orange, $red); 
+        @include titleBg($green, $yellow, $orange, $red);
         & > h6 {
             display: table-cell;
             vertical-align: middle;
@@ -303,6 +313,26 @@ div.card {
             }
         }
     }
+    .cardIcon {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        height: 50px;
+        width: 50px;
+        @media screen and (min-width: 768px) {
+            height: 80px;
+            width: 80px;
+        }
+        & img {
+            height: 50px;
+            width: 50px;
+            @include iconShadow($green, $yellow, $orange, $red);
+            @media screen and (min-width: 768px) {
+                height: 60px;
+                width: 60px;
+            }
+        }
+    }
 }
 
 .twitterHashtag {
@@ -321,7 +351,6 @@ div.card {
     }
 }
 
-
 footer {
     position: relative;
     height: 80px;
@@ -329,7 +358,8 @@ footer {
     @media screen and (min-width: 992px) {
         font-size: 0.8em;
     }
-    & .footerInfo, & .ui-BackToTop {
+    & .footerInfo,
+    & .ui-BackToTop {
         bottom: 50%;
         transform: translateY(50%);
         vertical-align: middle;
@@ -354,7 +384,6 @@ footer {
                 }
             }
         }
-       
     }
     & .ui-BackToTop {
         position: absolute;
@@ -394,7 +423,4 @@ footer {
         }
     }
 }
-//@include hoverGradient($blue, $green, $yellow, $orange, $red, $teal)
-
-
 
