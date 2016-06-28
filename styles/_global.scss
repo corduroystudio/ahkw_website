@@ -233,6 +233,9 @@ div.card {
     position: relative;
     cursor: pointer;
     @include bgColor($green, $yellow, $orange, $red);
+    &.inView .grade {
+        @include longShadow($green, $yellow, $orange, $red);
+    }
     &:not(.indicatorPage):hover .grade {
         @include longShadow($green, $yellow, $orange, $red);
     }
