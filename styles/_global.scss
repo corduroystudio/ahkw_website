@@ -1,6 +1,9 @@
 body {
     @include default;
 }
+body.nav-open {
+    overflow-y: hidden;
+}
 
 .container {
     max-width: 100%;
@@ -87,7 +90,7 @@ h6 {
         display: block;
         top: 50%;
         right: 0;
-        padding: 24px 24px;
+        padding: 24px 32px;
         transform: translateY(-50%);
     }
     & a {
@@ -239,6 +242,9 @@ div.card {
     &:not(.indicatorPage):hover .grade {
         @include longShadow($green, $yellow, $orange, $red);
     }
+    &:not(.indicatorPage):hover .cardTitle span.arrowRight {
+        width: 48px;
+    }
     @media screen and (min-width: 768px) {
         width: 50%;
         float: left;
@@ -279,6 +285,22 @@ div.card {
             text-align: left;
             padding-left: 28px;
             width: 75%;
+            & span {
+                position: relative;
+                top: -1px;
+                display: inline-block;
+                width: 32px;
+                height: 12px;
+                overflow: hidden;
+                margin-left: 10px;
+                transition: all .2s cubic-bezier(.215,.61,.355,1);
+                & svg {
+                    height: 12px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
         }
     }
 }
@@ -316,6 +338,7 @@ footer {
         position: absolute;
         left: 0;
         padding-left: 24px;
+        width: 50%;
         & i {
             vertical-align: middle;
         }
@@ -346,9 +369,31 @@ footer {
         &:hover {
             opacity: 1;
         }
+        &:hover svg {
+            height: 48px;
+        }
+        & div.ui-content {
+            vertical-align: middle;
+            text-align: left;
+            display: block;
+        }
+        & span {
+            position: relative;
+            display: block;
+            width: 12px;
+            height: 32px;
+            overflow: hidden;
+            margin: 0 auto;
+            & svg {
+                width: 12px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+            }   
+        }
     }
 }
-
 //@include hoverGradient($blue, $green, $yellow, $orange, $red, $teal)
 
 
