@@ -2,6 +2,7 @@ $(document).ready(function() {
                   
     $('.hamburger').on('click', function() {
         $(this).toggleClass('is-active');
+        $('body').toggleClass('nav-open');
         $('.hamburger-label.menu').toggleClass('is-active');
         $('.hamburger-label.close').toggleClass('is-active'); 
         
