@@ -15,7 +15,15 @@
 span.underline {
     text-decoration: underline;
     font-weight: 700;
+    cursor: default;
 }
+span.bold {
+    font-weight: 700;
+}
+span.italic {
+    font-style: italic;
+}
+
 
 .indicatorExpand {
     margin-top: 140px;
@@ -86,7 +94,7 @@ div.expandContent.open {
         &.indent {
             width: 50%;
             @media screen and (min-width: 768px) {
-                width: 30%;
+                width: 35%;
             }
             & > li {
             padding-top: 14px;
