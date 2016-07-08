@@ -2,9 +2,35 @@
     width: 100%;
     height: 100%;
     cursor: default;
+    position: relative;
     & .cardTitle > h6 {
         text-align: center;
-        width: 100%
+        width: 100%;
+        padding-left: 0;
+    }
+    .cardIcon {
+        position: absolute;
+        top: 124px;
+        right: 24px;
+        height: 50px;
+        width: 50px;
+        @media screen and (min-width: 768px) {
+            height: 80px;
+            width: 80px;
+        }
+        & img {
+            height: 50px;
+            width: 50px;
+            @include iconShadow($green, $yellow, $orange, $red);
+            @media screen and (min-width: 768px) and (max-width: 1200px) {
+                height: 60px;
+                width: 60px;
+            }
+            @media screen and (min-width: 1200px) {
+                height: 80px;
+                width: 80px;
+            }
+        }
     }
 }
 
@@ -24,10 +50,99 @@ span.italic {
     font-style: italic;
 }
 
-
-.indicatorExpand {
-    margin-top: 140px;
+a.textLink {
+    color: $darkBlue;
 }
+
+.wrapper.rm {
+    margin: 56px auto;
+}
+
+.rmView {
+    display: none;
+    width: 100%;
+    background: $white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;    
+    z-index: 1000;
+    &.active {
+        display: block;
+    }
+    & > ol.dataList {
+        width: 90%;
+        display: table;
+        margin: 28px auto;
+        position: relative;
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+           width: 70%;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 80%;
+            max-width: 1100px;
+        }
+        & > li {
+            width: 100%;
+            padding: 14px 0;
+            @media screen and (min-width: 1024px) {
+                width: 50%;
+                padding: 28px 56px;
+                display: table-cell;
+            }
+            & > span {
+                width: 100%;
+                color: $blue;
+                font-size: 60px;
+                line-height: 1;
+                font-family: 'Cantarell';
+                font-weight: 400;
+                text-align: center;
+                @media screen and (min-width: 1024px) {
+                    width: 50%;
+                }
+            }
+            & > p {
+                padding-top: 28px;
+                font-size: $mobileFont * 0.86;                    
+            }
+        }
+        & > li.break {
+            display: table-row;
+        }
+        & > li.only {
+            width: 100%;
+            padding: 14px 0;
+            @media screen and (min-width: 1024px) {
+                width: 80%;
+                padding: 28px 56px;
+                display: table-cell;
+            }
+        }
+    }
+    & > .closeRM {
+        text-align: center;
+        cursor: pointer;
+        & > h6 {
+            font-size: $mobileFont;
+            color: $blue;
+        }
+        & > div {
+            background: url(/media/icons/closeBtn.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            height: 20px;
+            width: 20px;
+            margin: 7px auto;
+        }
+    }
+}
+
+
+    
+
 
 div.expand {
     height: 80px;
