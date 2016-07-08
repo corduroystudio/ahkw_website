@@ -27,7 +27,27 @@ $(document).ready(function() {
     });
     
                   
-              
-                  
+    //rotate device
+    var html = '<div class="rotateDevice">'; 
+    html += '<h5>Please rotate your device</h5>';
+    html += '<img src="media/icons/rotate.svg" alt="Rotate Device">';
+    html += '</div>';
+    
+    //show rotate device if on mobile and landscape orientation
+    if ($(window).height() < $(window).width() && $(window).width() < 768) {
+        $('body').append(html);
+    } 
+    
+    
+    //resize function
+    $(window).resize(function() {
+       
+        if ($(window).height() < $(window).width() && $(window).width() < 768) {
+            $('body').append(html);
+        } else {
+            $('.rotateDevice').hide();
+        }
+        
+    });
                   
 });
