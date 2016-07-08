@@ -1,5 +1,19 @@
 $(document).ready(function() {
     
+    //open .rmView on #rmBtn click
+    $('#rmBtn').parent().on('click', function() {
+        
+        $('.rmView').addClass('active');
+        $('body').css({overflow: 'hidden'});
+        $('.rmView').css({overflow: 'auto'});
+        
+        $('.closeRM').on('click', function() {
+             $('.rmView').removeClass('active');
+            $('body').css({overflow: 'auto'});
+        });
+        
+    });     //end #rmBtn click event
+    
     //check for expand position and scroll element to top
     function scrollToView(element) {
         
