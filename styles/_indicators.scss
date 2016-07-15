@@ -209,11 +209,22 @@ div.expandContent.open {
         &.indent {
             width: 50%;
             @media screen and (min-width: 768px) {
-                width: 35%;
+                width: 37%;
             }
             & > li {
             padding-top: 14px;
             padding-bottom: 0;
+                & > a, & > a:visited {
+                    border-bottom: 2.5px dotted $blueGray;
+                    text-decoration: none;
+                    color: $blueGray;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+                }
+                & > a:hover {
+                    border-bottom-color: #fff;
+                    transition: all .3s ease-in-out;
+                }
             }
         } 
     }

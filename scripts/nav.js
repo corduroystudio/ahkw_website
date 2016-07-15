@@ -18,12 +18,41 @@ $(document).ready(function() {
         $('header').toggleClass('fixed');
     });
     
-    $('.langSetting').on('click', function() {
-        $(this).children().toggleClass('is-active');
-    });
-    
     $('.ui-BackToTop').on('click', function() {
         $('html, body').animate({scrollTop: 0}, 400)
+    });
+    
+    
+    //Language click event
+    $('.langSetting a').on('click', function() {
+        
+        //record current page uri
+        var url = $(this).context.baseURI;
+        
+        if ($('html').attr('lang') == 'en') {
+            if (url.indexOf('index') > -1) {
+                var newUrl = url.replace('/index', '/cy/index');
+                $('a.cy').attr('href', newUrl);
+            } else  if (url.indexOf('about') > -1){
+                var newUrl = url.replace('/about', '/cy/about');
+                $('a.cy').attr('href', newUrl);
+            } else  if (url.indexOf('report') > -1){
+                var newUrl = url.replace('/report', '/cy/report');
+                $('a.cy').attr('href', newUrl);
+            } else {
+                var newUrl = url.replace('indicators', 'cy');
+                $('a.cy').attr('href', newUrl);
+            }
+            
+        } else if ($('html').attr('lang') == 'cy') {
+            if (url.indexOf('about') > -1 || url.indexOf('index') > -1 || url.indexOf('report') > -1) {
+                var newUrl = url.replace('/cy', '');
+                $('a.en').attr('href', newUrl);
+            } else {
+                var newUrl = url.replace('cy', 'indicators');
+                $('a.en').attr('href', newUrl);
+            }            
+        }
     });
     
                   
