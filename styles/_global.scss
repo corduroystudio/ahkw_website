@@ -24,6 +24,9 @@ body.nav-open {
 p {
     @include default;
     margin-bottom: 21px;
+    &.center {
+        text-align: center;
+    }
     @media screen and (min-width: 992px) {
         margin-bottom: 24px;
     }
@@ -451,3 +454,7 @@ footer {
     }
 }
 
+.noContent {
+    content: '';
+    height: 56px;
+}
