@@ -247,3 +247,40 @@ div.expandContent.improve {
 div.expandContent.sources {
     background: $lightBlue;
 }
+
+
+// ID Styles
+
+#chart {
+    height: 420px;
+    width: 90%;
+    padding: 0;
+}
+text {
+    font-size: 32px;
+    font-weight: 700;
+    &#value {
+        fill: $blue;
+    }
+    &#commVal {
+        fill: $white;
+    }
+}
+tspan {
+    font-size: 16px;
+    font-weight: 400;
+    &.sub-text {
+        font-size: 10px;
+    }
+}
+.iconY {
+    fill: $blue;
+}
+.iconN {
+    fill: $blueGray;
+    opacity: .5;
+}
+
+rect.bar {
+    fill: $blue;
+}
