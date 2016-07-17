@@ -1,0 +1,641 @@
+p, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    color: $white;
+    &.dark {
+        color: $aubergineDark;
+    }
+    &.light {
+        font-weight: 700;
+    }
+    &.upper {
+        text-transform: uppercase;
+    }
+    &.wide {
+        letter-spacing: 1.2px;
+    }
+}
+
+
+p {
+    font-size: $fontSize * 1.2;
+    @media screen and (min-width: 1400px) {
+        font-size: $fontSize * 1.4;
+    } 
+    &.small {
+        font-size: $fontSize;
+    }
+    &.centered {
+        @include center();
+        width: 350px;
+        text-align: center;
+    }   
+}
+
+h3 {
+    font-size: $fontSize * 2.1;
+}
+
+h4 {
+    font-size: $fontSize * 1.8;
+}
+
+h5 {
+    font-size: $fontSize * 1.6;
+}
+
+h6 {
+    font-size: $fontSize * 1.4;
+}
+
+
+.firstLoad {
+    display: none;
+    z-index: 999;
+    &.active {
+        display: block;
+        z-index: 999;
+    }
+}
+
+
+nav {
+    width: 100%;
+    height: 80px;
+    background: $white;
+    position: relative;
+    text-align: center;
+    @media screen and (min-width: 1024px) {
+        height: 100px;
+    }
+    & > img {
+        width: 300px;
+        height: auto;
+        @media screen and (min-width: 1024px) {
+            width: 390px;
+        }
+    }
+    & > h5 {
+        display: none;
+        @media screen and (min-width: 1024px) {
+            display: inline-block;
+            padding-left: 28px;
+            max-width: 300px;
+            vertical-align: 30px;
+        }
+    }
+}
+
+div.container {
+    width: 100%;
+    position: relative;
+    &.load {
+        background: $aubergine;
+        height: 100vh;
+        & > .progress {
+            @include center(30, 50);
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}
+
+
+div.mainView {
+    display: none;
+    position: relative;
+    &.active {
+        display: block;
+        @media screen and (orientation: landscape) and (max-width: 750px) {
+            display: none;
+        }
+        @media screen and (orientation: portrait) and (min-width: 750px) {
+            display: none;
+        }   
+    }
+    & > nav {
+        display: none;
+        @media screen and (min-width: 1024px) {
+            display: block;
+        }
+    }
+    & > .region {
+        background: $aubergine;
+        height: 55px;
+        position: relative;
+        width: 100%;
+        @media screen and (min-width: 1024px) and (max-width: 1280px) {
+            left: 60%;
+            width: 40%;
+            float: left;
+        }
+        @media screen and (min-width: 1280px) {
+            left: 68%;
+            width: 32%;
+            float: left;
+        }
+        & > h4 {
+            @include center();
+        }
+    }
+    & > .mapTitle {
+        background: $aubergineLight;
+        height: 25px;
+        position: relative;
+        width: 100%;
+        @media screen and (min-width: 1024px) and (max-width: 1280px) {
+            right: 40%;
+            width: 60%;
+            float: left;
+            height: 55px;
+        }
+        @media screen and (min-width: 1280px) {
+            right: 32%;
+            width: 68%;
+            float: left;
+            height: 55px;
+        }
+    }
+    & > .instruction {
+        display: none;
+        position: absolute;
+        top: 200px;
+        left: 40px;
+        width: 130px;
+        text-align: center;
+        line-height: 1.4;
+        &.active {
+            display: block;
+        }
+        & span {
+            color: $aubergine;
+        }
+    }
+    & > .nextRegion {
+        display: none;
+        position: absolute;
+        top: 94px;
+        right: 14px;
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+        & > p {
+            display: inline-block;
+            font-size: 11px;
+            color: $aubergine;
+        }
+        & > img {
+            display: inline-block;
+            height: 14px;
+            padding-bottom: 4px;
+            padding-left: 4px;
+        }
+    }
+    & > .container.barChartTitle {
+        width: 100%;
+        padding-top: 28px;
+        @media screen and (min-width: 1024px) and (max-width: 1280px) {
+            margin-left: 60%;
+            width: 40%;
+            margin-top: 280px;
+        }
+        @media screen and (min-width: 1280px) {
+            margin-left: 68%;
+            width: 32%;
+            margin-top: 280px;
+        }
+    }
+    & > .container#barChart {
+        width: 100%;
+        @media screen and (min-width: 1024px) and (max-width: 1280px) {
+            margin-left: 60%;
+            width: 40%;
+        }
+        @media screen and (min-width: 1280px) {
+            margin-left: 68%;
+            width: 32%;
+        }
+    }
+    
+}
+
+div#map {
+    width: 100%;
+    height: 40vh;
+    @media screen and (min-width: 1024px) and (max-width: 1280px) {
+        width: 60%;
+        float: left;
+        height: 80vh;
+    }
+    @media screen and (min-width: 1280px) {
+        width: 68%;
+        float: left;
+        height: 80vh;
+    }
+}
+
+div.statistics {
+    display: none;
+    @media screen and (min-width: 1024px) and (max-width: 1280px) {
+        display: block;
+        margin-left: 60%;
+        margin-top: 98px;
+        width: 40%;
+    }
+    @media screen and (min-width: 1280px) {
+        display: block;
+        margin-left: 68%;
+        margin-top: 98px;
+        width: 32%;
+    }
+    & > .stat {
+        width: 80%;
+        margin: 0 auto;
+        & > p {
+            width: 50%;
+            float: left;
+            padding-top: 9px;
+        }
+        & > h3 {
+            width: 50%;
+            float: left;
+            padding-bottom: 28px;
+            @include statColor($aubergine, $bronze, $bronzeStar, $silver, $silverStar, $gold, $goldStar, $platinum);
+        }
+    }
+}
+
+.button {
+    display: none;
+    position: absolute;
+    z-index: 997;
+    &.active {
+        display: block;
+        @media screen and (orientation: landscape) and (max-width: 750px) {
+            display: none;
+        }
+        @media screen and (orientation: portrait) and (min-width: 750px) {
+            display: none;
+        }  
+    }
+    &.selectRegion {
+        top: 14px;
+        right: 14px;
+        @media screen and (min-width: 1024px) {
+            top: 115px;
+        }
+    }
+    &.readMore {
+        top: 94px;
+        left: 14px;
+        @media screen and (min-width: 1024px) {
+            top: auto;
+            bottom: 0;
+            left: 0;
+            height: 30px;
+            width: 100%;
+            background: $aubergineDark;
+            cursor: pointer;
+        }
+    }
+    & > div {
+        width: 37px;
+        height: 27px;
+        position: relative;
+        &.infoBtn {
+            background: $aubergineDark;
+            & > img {
+                width: 5px;
+                height: 20px;
+                @include center();
+            }
+        }
+        &.regionBtn {
+            background: $white;
+            & > img {
+                width: 17px;
+                height: 9px;
+                @include center(); 
+            }
+        }
+    }
+}
+
+.dropDownMenu {
+    display: none;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: lighten($aubergine, 3%);
+    &.active {
+        display: block;
+        @media screen and (min-width: 1000px) {
+            top: 154px;
+        }
+    }
+    & > ol {
+        width: 80%;
+        margin: 0 auto;
+        & > li:first-of-type {
+            text-align: center;
+            padding: 28px 0 8px 0;
+            @media screen and (min-width: 350px) and (orientation: portrait) {
+                padding: 28px 0 12px 0;
+            }
+        }
+        & > li {
+            text-align: center;
+            padding: 8px 0;
+            @media screen and (min-width: 350px) and (orientation: portrait) {
+                padding: 12px 0;
+            }
+        }
+    }
+}
+
+.infoView {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    min-height: 625px;
+    position: relative;
+    background: $aubergine;
+    text-align: center;
+    &.active {
+        display: block;
+    }
+    @media screen and (min-width: 1024px) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 220px;
+        min-height: 200px;
+    }
+    & > nav {
+        display: block;
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    } 
+    & > #infoTitle {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 28px;
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    }
+    & > #dcVideo {
+        margin: 0 auto;
+        position: relative;
+        @media screen and (min-width: 1024px) {
+            width: 30%;
+            left: 5%;
+            float: left;
+        }
+        & > .video-container {
+            padding-bottom: 180px;
+            padding-top: 28px;
+            height:0;
+            width: 100%;
+            & > .video-container iframe {
+                position:absolute;
+                top:0;
+                left:0;
+                bottom: 0;
+                width:100%;
+                height:100%;
+                border: 0;
+            }
+        } 
+    }
+    & > a  {
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+        &:hover {
+            & > #pdf {
+                transition: all .3s ease-in-out;
+                border: 2px solid $white;
+                & > p {
+                    color: $white;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+        &:active, &:visited {
+            text-decoration: none;
+        }
+        & > #pdf {
+            width: 150px;
+            margin: 14px auto;
+            border: 2px solid $aubergineLight;
+            padding: 7px;
+            @media screen and (min-width: 1024px) {
+                float: left;
+                margin-top: 68px;
+                width: 200px;
+                & > p {
+                    letter-spacing: 1px;
+                }
+            }
+            & > p {
+                color: $aubergineLight;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+        }
+    }
+    & > #organisations {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 14px;
+        @media screen and (min-width: 1024px) {
+            width: 30%;
+            float: left;
+            padding-top: 44px;
+            padding-left: 5%;
+        }
+        & > h6, & p {
+            padding-bottom: 14px;
+            letter-spacing: 1px;
+        }
+        & > a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    & > #credits {
+        position: absolute;
+        bottom: 14px;
+        right: 14px;
+        & > h6 {
+            font-style: italic;
+            & > a {
+                color: $aubergineDark;
+                cursor: pointer;
+            }
+        } 
+    } 
+    & > #closeBtn {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $aubergineDark;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        @media screen and (min-width: 1024px) {
+            width: 100%;
+            left: 0;
+            bottom: 220px;
+            right: 0;
+            text-align: left;
+            height: 50px;
+        }
+        & > img {
+            height: 18px;
+            width: 18px;
+            color: $white;
+            padding: 14px 0 7px 0;
+            @media screen and (min-width: 1024px) {
+                padding: 16px 0 16px 14px;
+                float: left;
+            }
+        }
+        & > h6 {
+            @media screen and (min-width: 1024px) {
+                float: left;
+                padding: 20px 14px;
+            }
+        }
+    }
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 996;
+    background-color: rgba($black, 0.6);
+    &.active {
+        display: block;
+        @media screen and (min-width: 1024px) {
+            //display: none;
+        }
+        @media screen and (orientation: landscape) and (max-width: 750px) {
+            display: none;
+        }
+        @media screen and (orientation: portrait) and (min-width: 750px) {
+            display: none;
+        }  
+    }
+    & > .infoHelp {
+        @include overlayHelp('104', '27', '26');
+        left: 14px;
+        bottom: initial;
+        @media screen and (min-width: 1024px) {
+            top: initial;
+            bottom: 50px;
+            left: 20px;
+            padding-left: 40px;
+        }
+        & > img.mobile {
+            display: block;
+            margin: 0 auto 7px auto;
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
+        }
+        & > img.tablet {
+            transform: rotate(270deg);
+            display: none;
+            @media screen and (min-width: 1024px) {
+                display: block;
+                margin: 0;
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+            }
+        }
+    }
+    & > .regionHelp {
+        @include overlayHelp('24', '25', '35');
+        right: 14px;
+        @media screen and (min-width: 1024px) {
+            top: 124px;
+        }
+    }
+    & > .gotItBtn {
+        @include center();
+        width: 90px;
+        text-align: center;
+        border: 2px solid $white;
+        cursor: pointer;
+        & > h5 {
+            padding: 14px;
+        }
+    }
+}
+
+
+.rotateDevice {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 998;
+    background-color: $aubergineDark;
+    @media screen and (orientation: landscape) and (max-width: 750px) {
+        display: block;
+    }
+    @media screen and (orientation: portrait) and (min-width: 750px) {
+        display: block;
+    }
+    & > h4 {
+        @include center(); 
+        text-align: center;
+        width: 250px;
+    }
+    & > img {
+        width: 50px;
+        @include center(30, 50);
+        @media screen and (orientation: portrait) and (min-width: 750px) {
+            top: 40%;
+            transform: translate(-50%, -40%);
+        }
+    }
+}
+
+
+.percentText {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    fill: $aubergineDark;
+}
+
+.awardText {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 9px;
+    fill: $white;
+    @media screen and (min-width: 400px) and (max-width: 1024px) {
+        font-size: 11px;
+    }
+    @media screen and (min-width: 1024px)   {
+        font-size: 12px;
+    }
+}
+
+path.regions {
+    cursor: pointer;
+}

@@ -1,0 +1,61 @@
+@mixin statColor($colors...) {
+    @each $color in $colors {
+        @if $color == $bronze {
+            &.bronze {
+                color: $color;
+            } 
+        } @else if $color == $bronzeStar {
+            &.bronzeStar {
+                color: $color;
+            }
+        } @else if $color == $silver {
+            &.silver {
+                color: $color;
+            }
+        } @else if $color == $silverStar {
+            &.silverStar {
+                color: $color;
+            }
+        } @else if $color == $gold {
+            &.gold {
+                color: $color;
+            }
+        } @else if $color == $goldStar {
+            &.goldStar {
+                color: $color;
+            }
+        } @else if $color == $platinum {
+            &.platinum {
+                color: $color;
+            }
+        } @else if $color == $aubergine {
+            &.aubergine {
+                color: $color;
+            }
+        }
+        
+    }
+}
+
+@mixin overlayHelp($topPos, $imgWidth, $imgHeight) {
+    position: absolute;
+    width: 140px;
+    text-align: center;
+    top: unquote($topPos + 'px');
+    & > img, & > img.tablet & > img.mobile {
+        width: unquote($imgWidth + 'px');
+        height: unquote($imgHeight + 'px');
+    }
+    & > p {
+        line-height: 1.2;
+        letter-spacing: 0.8px;
+    }
+}
+
+
+@mixin center($top: 50, $left: 50) {
+    position: absolute;
+    top: unquote($top + '%');
+    left: unquote($left + '%');
+    transform: unquote('translate(-' + $left + '%, -' + $top + '%)');
+}
