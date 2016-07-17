@@ -117,14 +117,20 @@ h6 {
         opacity: .4;
         transition: opacity .3s;
         display: inline-block;
+        text-decoration: none;
         &:nth-child(1) {
             padding-right: 12px;
         }
         &:hover {
             opacity: .9;
         }
-        &.is-active {
+        &:active, &:visited {
+            color: $blue;
+            text-decoration: none;
+        }
+        &.is-active, &.is-active:active, &.is-active:visited {
             opacity: 1;
+            text-decoration: none;
             &::after {
                 content: " ";
                 height: 2px;
@@ -162,13 +168,13 @@ header {
 
 div.section {
     clear: both;
-    margin-top: $mobileFont * 4;
+    margin-top: $mobileFont * 6;
     max-width: 675px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 14px;
     @media screen and (min-width: 992px) {
-        margin-top: $desktopFont * 4;
+        margin-top: $desktopFont * 6;
     }
 }
 
