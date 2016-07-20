@@ -251,3 +251,102 @@ div.expandContent.improve {
 div.expandContent.sources {
     background: $lightBlue;
 }
+
+// Indicator Link Styles
+
+.image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 420px;
+    margin-bottom: 84px;
+    opacity: .85;
+    transition: opacity .3s ease-in-out;
+    &#swanlinx {
+        background-image: url(https://geoshepherds.github.io/ahkw_website/media/images/swanlinx.jpg);
+    }
+    &#dragonChallenge {
+        background-image: url(https://geoshepherds.github.io/ahkw_website/media/images/dragon_challenge.jpg);
+    }
+    @media screen and (min-width: 768px) {
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+
+// Chart Styles
+
+#chart {
+    height: 420px;
+    width: 90%;
+    padding: 0;
+    &.arc {
+        height: 320px;
+        @media screen and (min-width: 768px) {
+            height: 420px;
+        }
+    }
+}
+.chart-title {
+    margin-bottom: 0;
+    color: $blue;
+}
+text.svgText {
+    font-size: 32px;
+    font-weight: 700;
+    &#value {
+        fill: $blue;
+    }
+    &#barVal {
+        fill: $blue;
+        font-size: 22px;
+    }
+    &#barHead {
+        fill: $white;
+        font-size: 12apx;
+        @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
+    }
+    &#commVal {
+        fill: $white;
+    }
+}
+tspan {
+    font-size: 16px;
+    font-weight: 400;
+    &.sub-text, &.sub-text2 {
+        font-size: 10px;
+    }
+}
+.iconY {
+    fill: $blue;
+}
+.iconN {
+    fill: $blueGray;
+    opacity: .5;
+}
+
+rect.bar {
+    fill: $blue;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: $blueGray;
+  shape-rendering: crispEdges;
+}
+.axis text {
+    font-size: 12px;
+    fill: $blueGray;
+}
+
+.line {
+  fill: none;
+  stroke: $blue;
+  stroke-width: 1.5px;
+}
