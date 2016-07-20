@@ -254,7 +254,7 @@
 @mixin profilePic($members...) {
     @each $member in $members {
         &##{$member} {
-            background: url(/media/images/#{$member}.jpg);
+            background: url(https://geoshepherds.github.io/ahkw_website/media/images/#{$member}.jpg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -268,7 +268,7 @@
 @mixin orgLogos($organisations...) {
     @each $organisation in $organisations {
         &##{$organisation} {
-            background: url(/media/images/#{$organisation}.jpg);
+            background: url(https://geoshepherds.github.io/ahkw_website/media/images/#{$organisation}.jpg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -301,28 +301,3 @@
         
     }
 }    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-

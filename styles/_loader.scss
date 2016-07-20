@@ -1,0 +1,110 @@
+@keyframes dragonIntro {
+    100% {
+        background-position: -1602px 0;
+    }
+}
+
+@keyframes moveDragon {
+    80% {
+        left: 300%;
+    }
+    100% {
+        right: -100%;
+        display: none;
+    }
+}
+
+@keyframes moveBg {
+    0% {
+        display: block;
+    }
+    100% {
+        left: 100%;
+        display: none;
+    }
+}
+
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+    }
+}
+
+div.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    overflow: hidden;
+    z-index: 3000;
+    &.active {    
+        animation: moveBg 2s 4.5s;
+        animation-fill-mode: forwards;
+    }
+    & .dragonWrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        &.active {    
+            animation: moveDragon 3s 3.5s;
+            animation-fill-mode: forwards;
+        }
+        & .animation {
+            width: 200px;
+            height: 123px;
+            background: url(https://geoshepherds.github.io/ahkw_website/media/images/ahkw_logo_animate.svg) left center;
+            animation: dragonIntro 0.7s steps(8) infinite;
+        }
+    }
+    & .ahkw {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 750px;
+        display: table;
+        & h6 {
+            display: none;
+            vertical-align: middle;
+            margin-top: 20%;
+            font-family: 'Lato';
+            text-transform: uppercase;
+            color: #000;
+            font-weight: 900;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            animation: fadeOut 1s 4s;
+            animation-fill-mode: forwards;
+            @media screen and (min-width: 768px) {
+                display: table-cell;  
+            }
+            &.wel {
+                text-align: right;
+            }
+            & span {
+                color: #C92918;
+            }
+        }
+    }
+    & > p {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        font-family: 'Lato';
+        font-weight: 400;
+        text-rendering: geometricPrecision;
+        text-transform: uppercase;
+        opacity: 1;
+        background: transparent;
+        letter-spacing: 1.2px;
+        animation: fadeOut 1s 3s;
+        animation-fill-mode: forwards;
+    }
+}
