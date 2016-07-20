@@ -1,23 +1,22 @@
 $(document).ready(function(){
     
     var container = $('#chart'),
-        width = container.width() / 2,
+        width = container.width(),
         aspect = width / container.height(),
         height = width / aspect,
         contH = container.height(),
-        padding = 12;
+        padding = 6;
     
     var data = [
-        {key: 'of parents with children', key2: 'aged 1-10 years were', key3: 'happy with playing facilities', value: 54},
-        {key: 'of parents with children', key2: 'aged 11-15 years were', key3: 'happy with playing facilities', value: 38}
+        {key: 'Gaming', value: 53},
+        {key: 'Other than gaming', value: 64},
+        {key: 'Watching',key2: 'entertainment', value: 68}
     ];
     
     var svg = d3.select('#chart').append('svg')
         .attr({
-            width: '100%',
-            height: '100%',
-            viewBox: '0 0 '+Math.min(width,contH)+' '+Math.min(width,contH),
-            preserveAspectRatio: 'xMidYMin' 
+            width: width,
+            height: height
         });  
     
     var defs = svg.append('defs')
@@ -50,7 +49,12 @@ $(document).ready(function(){
         .range([contH, 0])
         .domain([0, 100]);
     
-    var bar = svg.selectAll('rect')
+    var g = svg.append('g')
+        .attr({
+            class: 'group'
+        });
+    
+    var bar = g.selectAll('rect')
         .data(data)
         .enter().append('rect')
         .attr({
@@ -58,7 +62,7 @@ $(document).ready(function(){
             x: function(d,i) {
                 return i * (width / data.length + padding);
             },
-            width: width / data.length - padding,
+            width: width / data.length - (padding * 2),
             y: function(d) {
                 return y(d.value) - 90;
             },
@@ -70,7 +74,7 @@ $(document).ready(function(){
             fill: 'url(#grad)'
         });
         
-    svg.selectAll('text')
+    g.selectAll('text')
         .data(data)
         .enter().append('text')
         .text(function(d) {
@@ -90,20 +94,26 @@ $(document).ready(function(){
         .append('tspan')
         .attr({
             class: 'sub-text',
+            id: function(d, i) {
+                return 'id'+i;
+            },
             x: function(d, i) {
                 return i * (width / data.length + padding) + (width / data.length - padding) / 2;
             },
             y: function(d) {
                 return y(d.value) - 50;
             },
-            dy: 26
+            dy: 32
         })
         .text(function(d) {
             return d.key;
         })
         .append('tspan')
         .attr({
-            class: 'sub-text',
+            class: 'sub-text2',
+            id: function(d, i) {
+                return 'id'+i;
+            },
             x: function(d, i) {
                 return i * (width / data.length + padding) + (width / data.length - padding) / 2;
             },
@@ -114,20 +124,70 @@ $(document).ready(function(){
         })
         .text(function(d) {
             return d.key2;
-        })
-        .append('tspan')
-        .attr({
-            class: 'sub-text',
-            x: function(d, i) {
-                return i * (width / data.length + padding) + (width / data.length - padding) / 2;
-            },
-            y: function(d) {
-                return y(d.value) - 50;
-            },
-            dy: 66
-        })
-        .text(function(d) {
-            return d.key3;
         });
+    
+    
+    $(window).on('resize', function() {
+        
+        width = container.width(),
+        aspect = width / container.height(),
+        height = width / aspect,
+        contH = container.height();
+        
+        svg.attr({
+            width: width,
+            height: height
+        });
+        
+        d3.selectAll('rect')
+            .attr({
+                x: function(d,i) {
+                    return i * (width / data.length + padding);
+                },
+                width: width / data.length - (padding * 2),
+                y: function(d) {
+                    return y(d.value) - 90;
+                },
+                height: function(d, i) {
+                    return contH - y(d.value);
+                }
+            });
+        
+        g.selectAll('#commVal')
+            .attr({
+                'text-anchor': 'middle',
+                x: function(d, i) {
+                    return i * (width / data.length + padding) + (width / data.length - padding) / 2;
+                },
+                y: function(d) {
+                    return y(d.value) - 50;
+                }
+            });
+        
+        
+        d3.selectAll('.sub-text')
+            .attr({
+                x: function(d, i) {
+                    return i * (width / data.length + padding) + (width / data.length - padding) / 2;
+                },
+                y: function(d) {
+                    return y(d.value) - 50;
+                },
+                dy: 32
+            });
+        
+        
+        d3.selectAll('.sub-text2')
+            .attr({
+                x: function(d, i) {
+                    return i * (width / data.length + padding) + (width / data.length - padding) / 2;
+                },
+                y: function(d) {
+                    return y(d.value) - 50;
+                },
+                dy: 46
+            });
+        
+    });
    
 });

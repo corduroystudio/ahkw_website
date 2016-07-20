@@ -46,7 +46,8 @@ $(document).ready(function(){
             id: 'value',
             x: xPadding,
             y: yPadding,
-            dy: -46
+            dy: -46,
+            class: 'svgText'
         })
         .text('40%').append('tspan')
         .attr({
