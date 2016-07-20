@@ -30,7 +30,10 @@ $(document).ready(function() {
         var url = $(this).context.baseURI;
         
         if ($('html').attr('lang') == 'en') {
-            if (url.indexOf('index') > -1) {
+            if (url == 'https://geoshepherds.github.io/ahkw_website/') {
+                var newUrl = url.replace('/ahkw_website/', '/ahkw_website/cy/index');
+                $('a.cy').attr('href', newUrl);
+            } else if (url.indexOf('index') > -1) {
                 var newUrl = url.replace('/index', '/cy/index');
                 $('a.cy').attr('href', newUrl);
             } else  if (url.indexOf('about') > -1){
@@ -59,7 +62,7 @@ $(document).ready(function() {
     //rotate device
     var html = '<div class="rotateDevice">'; 
     html += '<h5>Please rotate your device</h5>';
-    html += '<img src="media/icons/rotate.svg" alt="Rotate Device">';
+    html += '<img src="https://geoshepherds.github.io/ahkw_website/media/icons/rotate.svg" alt="Rotate Device">';
     html += '</div>';
     
     //show rotate device if on mobile and landscape orientation

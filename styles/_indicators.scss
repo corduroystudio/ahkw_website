@@ -3,6 +3,9 @@
     height: 100%;
     cursor: default;
     position: relative;
+    @media screen and (min-width: 1024px) {
+            height: 600px;
+        }
     & .cardTitle > h6 {
         text-align: center;
         width: 100%;
@@ -68,6 +71,7 @@ a.textLink {
     top: 0;
     left: 0;    
     z-index: 1000;
+    overflow-y: scroll;
     &.active {
         display: block;
     }
@@ -164,7 +168,7 @@ div.expand {
         @include shortShadow($lightBlue);
         @include shortShadow($xtraDarkBlue);
         & > div {
-            background: url(/media/icons/uiarrow-accordion.svg);
+            background: url(https://geoshepherds.github.io/ahkw_website/media/icons/uiarrow-accordion.svg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -207,7 +211,7 @@ div.expandContent.open {
             padding-bottom: 28px;
         }
         &.indent {
-            width: 50%;
+            width: 70%;
             @media screen and (min-width: 768px) {
                 width: 37%;
             }

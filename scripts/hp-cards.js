@@ -1,21 +1,17 @@
 $(document).ready(function() {
     
     var $cards = $('div.card');
-    //console.log($cards.offset());
     
     
     //check for card position and add inView class if true
     function scrollToView(element) {
         //console.log(element);
         var docViewTop = $(window).scrollTop();
-        //var docViewBottom = docViewTop + $(window).height()
            
         var elemTop = element.offset().top;
         var elemBottom = elemTop + element.height();
-        var enterView = docViewTop + 450;
+        var enterView = docViewTop + 500;
 
-        //console.log(elemBottom);
-        //console.log(enterView);
 
         if (elemBottom <= enterView && elemBottom > docViewTop) {
             //console.log('running');
