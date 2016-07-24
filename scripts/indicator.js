@@ -5,11 +5,11 @@ $(document).ready(function() {
         
         $('.rmView').addClass('active');
         $('body').css({overflow: 'hidden'});
-        $('.rmView').css({overflow: 'auto'});
+        $('.rmView').css({overflow: 'scroll'});
         
         $('.closeRM').on('click', function() {
              $('.rmView').removeClass('active');
-            $('body').css({overflow: 'auto'});
+            $('body').css({overflow: 'scroll'});
         });
         
     });     //end #rmBtn click event

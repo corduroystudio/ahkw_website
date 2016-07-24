@@ -1,23 +1,25 @@
 $(document).ready(function(){
     
     var container = $('#chart'),
-        width = container.width() / 2,
+        width = container.width() * 0.6,
         aspect = width / container.height(),
         height = width / aspect,
         contH = container.height(),
         padding = 12;
     
     var data = [
-        {key: 'of parents with children', key2: 'aged 1-10 years were', key3: 'happy with playing facilities', value: 54},
-        {key: 'of parents with children', key2: 'aged 11-15 years were', key3: 'happy with playing facilities', value: 38}
+        {key: 'facilities for', key2: 'children aged', key3: '1-10 years', value: 54},
+        {key: 'facilities for', key2: 'children aged', key3: '11-15 years', value: 38}
     ];
     
     var svg = d3.select('#chart').append('svg')
         .attr({
-            width: '100%',
-            height: '100%',
-            viewBox: '0 0 '+Math.min(width,contH)+' '+Math.min(width,contH),
-            preserveAspectRatio: 'xMidYMin' 
+            width: width,
+            height: height
+        })
+        .style({
+            'margin-left': '20%',
+            'margin-right': '20%'
         });  
     
     var defs = svg.append('defs')
@@ -90,6 +92,7 @@ $(document).ready(function(){
         .append('tspan')
         .attr({
             class: 'sub-text',
+            id: 'key1',
             x: function(d, i) {
                 return i * (width / data.length + padding) + (width / data.length - padding) / 2;
             },
@@ -104,6 +107,7 @@ $(document).ready(function(){
         .append('tspan')
         .attr({
             class: 'sub-text',
+            id: 'key2',
             x: function(d, i) {
                 return i * (width / data.length + padding) + (width / data.length - padding) / 2;
             },
@@ -118,6 +122,7 @@ $(document).ready(function(){
         .append('tspan')
         .attr({
             class: 'sub-text',
+            id: 'key3',
             x: function(d, i) {
                 return i * (width / data.length + padding) + (width / data.length - padding) / 2;
             },
@@ -129,5 +134,81 @@ $(document).ready(function(){
         .text(function(d) {
             return d.key3;
         });
+    
+    
+    $(window).on('resize', function() {
+        
+        width = container.width() * 0.6,
+        aspect = width / container.height(),
+        contH = container.height(),
+        height = width / aspect;
+        
+        svg.attr({
+            width: width,
+            height: height
+        });
+        
+        y.range([contH, 0]);
+        
+        
+    
+        bar
+            .attr({
+                x: function(d,i) {
+                   return i * (width / data.length + padding); 
+                },
+                height: function(d) {
+                    return contH - y(d.value);
+                },
+                width: width / data.length - padding,
+                y: function(d) {
+                    return y(d.value) - 90;
+                }
+            });    
+        
+        d3.selectAll('text')
+            .attr({
+                x: function(d, i) {
+                return i * (width / data.length + padding) + (width / data.length - padding) / 2;
+                },
+                y: function(d) {
+                    return y(d.value) - 50;
+                }
+            });
+        
+        d3.selectAll('tspan#key1')
+            .attr({
+                x: function(d, i) {
+                return i * (width / data.length + padding) + (width / data.length - padding) / 2;
+                },
+                y: function(d) {
+                    return y(d.value) - 50;
+                },
+                dy: 26
+            });  
+        
+        d3.selectAll('tspan#key2')
+            .attr({
+                x: function(d, i) {
+                return i * (width / data.length + padding) + (width / data.length - padding) / 2;
+                },
+                y: function(d) {
+                    return y(d.value) - 50;
+                },
+                dy: 46
+            });  
+        
+        d3.selectAll('tspan#key3')
+            .attr({
+                x: function(d, i) {
+                return i * (width / data.length + padding) + (width / data.length - padding) / 2;
+                },
+                y: function(d) {
+                    return y(d.value) - 50;
+                },
+                dy: 66
+            });  
+        
+    });
    
 });

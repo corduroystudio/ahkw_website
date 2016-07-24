@@ -1,14 +1,21 @@
 $(document).ready(function(){
    
     var container = $('#chart'),
-        width = container.width() / 2,
+        width = container.width() * 0.6,
         h = container.height(),
         aspect = width / container.height(),
         height = width / aspect,
         margin = 48,
         τ = 2 * Math.PI,
         outerRadius = Math.min(width,height)/2,
-        innerRadius = (outerRadius/5)*4;
+        innerRadius = (outerRadius/5)*4,
+        translateHeight;
+    
+    if ($(window).width() < 768) {
+        translateHeight = Math.min(width,height) * 0.75;
+    } else {
+        translateHeight = Math.min(width,height) / 2;
+    }
     
     var arc = d3.svg.arc()
         .innerRadius(innerRadius)
@@ -22,8 +29,8 @@ $(document).ready(function(){
             height: height
         })
         .style({
-            'margin-left': '25%',
-            'margin-right': '25%'
+            'margin-left': '20%',
+            'margin-right': '20%'
         });
     
     var defs = svg.append('defs')
@@ -57,7 +64,7 @@ $(document).ready(function(){
         .attr({
             class: 'arcGroup',
             transform: function(d) {
-                return 'translate(' + Math.min(width,height) / 2 + ',' + Math.min(width,height) / 2 + ')'; 
+                return 'translate(' + Math.min(width,height) / 2 + ',' + translateHeight + ')'; 
             }
         });
     
@@ -94,12 +101,18 @@ $(document).ready(function(){
     
     $(window).on('resize', function() {
         
-        width = container.width() / 2,
+        width = container.width() * 0.6,
         h = container.height(),
         aspect = width / container.height(),
         height = width / aspect,
         outerRadius = Math.min(width,height)/2,
         innerRadius = (outerRadius/5)*4;
+        
+        if ($(window).width() < 768) {
+            translateHeight = Math.min(width,height) * 0.75;
+        } else {
+            translateHeight = Math.min(width,height) / 2;
+        }
         
         arc.innerRadius(innerRadius)
             .outerRadius(outerRadius)
@@ -109,9 +122,9 @@ $(document).ready(function(){
             height: height
         });
         
-        d3.selectAll('.arcGroup')
+        d3.selectAll('g.arcGroup')
             .attr({
-                transform: 'translate(' + Math.min(width,height) / 2 + ',' + Math.min(width,height) / 2 + ')'
+                transform: 'translate(' + Math.min(width,height) / 2 + ',' + translateHeight + ')'
             });
         
         d3.select('.background').attr('d', arc);

@@ -19,6 +19,9 @@ p {
     @media screen and (min-width: 992px) {
         margin-bottom: 24px;
     }
+    &.blueText {
+        color: $blue;
+    }
 }
 
 h1,
@@ -38,6 +41,9 @@ h6 {
     }
     &.lower {
         text-transform: none;
+    }
+    &.blueText {
+        color: $blue;
     }
 }
 
@@ -207,7 +213,6 @@ button:focus {
 
 .landing {
     position: relative;
-    background: lighten($blue, 20%);
     height: 100vh;
     color: $white;
     @media screen and (min-width: 768px) {
@@ -225,9 +230,6 @@ button:focus {
         width: 100%;
         bottom: 0;
         height: 70px;
-        @media all and (orientation: portrait) {
-            height: 120px;
-        }
         &.indicator {
             @include titleBg($green, $yellow, $orange, $red);
         }
@@ -293,6 +295,7 @@ div.card {
             vertical-align: middle;
             text-align: left;
             padding-left: 28px;
+            padding-right: 7px;
             width: 75%;
             & span {
                 position: relative;

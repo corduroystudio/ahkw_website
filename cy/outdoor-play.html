@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang=cy>
 <head>
-<title>AHKW | Chwarae Awyr Agored ac Egnïol</title>
+<title>AHKW | Chwarae Egnïol ac yn yr Awyr Agored</title>
 <meta charset="utf-8">
 <meta name="viewport"               content="width=device-width, initial-scale=1.0">
     
@@ -106,7 +106,7 @@
                 </div>
                 <div class="cardTitle yellow">
                     <h6 class="lower light">
-                        Chwarae Awyr Agored ac Egnïol
+                        Chwarae Egnïol ac yn yr Awyr Agored
                     </h6>
                     <span class="ui arrowRight">
 
@@ -140,6 +140,14 @@
                 Defnyddiwyd arolwg mawr, cynrychioliadol yn genedlaethol, a gynhaliwyd gan Chwaraeon Cymru, ac arolwg llai ond cenedlaethol eto ar chwarae a gynhaliwyd fel rhan o Adroddiad Little Voices Shouting Out , gan y Gweithgor Ymchwil i bennu gradd chwarae awyr agored ac egnïol.
             </p>
         </div>
+        
+        <div class="section">
+            <h6 class="chart-title">
+                Percentage of children using these areas for play
+            </h6>
+        </div>
+        
+        <div id="chart" class="section"></div>
         
         <div class="wrapper rm">
             <a class="button" id="rmBtn">
@@ -390,6 +398,8 @@
     </div> <!-- closing container tag -->  
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="/scripts/indicators/outdoor.js"></script>
 <script src="/scripts/indicator.js"></script>
 <script src="/scripts/nav.js"></script>
 <script>
@@ -400,7 +410,6 @@
 
   ga('create', 'UA-81271313-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 </body> 
 
