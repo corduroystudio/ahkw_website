@@ -1,9 +1,17 @@
 $(document).ready(function(){
     
-    var container = $('#chart'),
-        width = container.width(),
-        aspect = width / container.height(),
+    var width,
+        container = $('#chart');
+    
+    if ($(window).width() < 768) {
+        width = container.width() * 0.9;
+    } else {
+        width = container.width() / 2;
+    }
+    
+    var aspect = width / container.height(),
         height = width / aspect,
+        useHeight = container.height() - 80,
         columns = 10,
         rows = 10, 
         xPadding = 20,
@@ -12,13 +20,13 @@ $(document).ready(function(){
         xBuffer = 40,
         primVal = 41;
     
-    var svg = d3.select('#chart').append('svg')
+   var svg = d3.select('#chart').append('svg')
         .attr({
             width: '100%',
             height: '100%',
-            viewBox: '0 0 '+Math.min(width,height)+' '+Math.min(width,height),
+            viewBox: '0 0 '+ width + ' ' + height,
             preserveAspectRatio: 'xMidYMid meet' 
-        });
+        }); 
     
      var defs = svg.append('defs')
         .append('g')
@@ -56,14 +64,6 @@ $(document).ready(function(){
             d: "M19.769,4.009c1.106,0,2.004-0.897,2.004-2.004S20.875,0,19.769,0c-1.107,0-2.005,0.897-2.005,2.004 S18.661,4.009,19.769,4.009z"
         });
     
-    svg.append('rect')
-        .attr({
-            width: +Math.min(width,height),
-            height: +Math.min(width,height)
-        })
-        .style({
-            fill: '#f2f2f2'
-        });
     
     var range = d3.range(columns*rows);
     
@@ -98,7 +98,7 @@ $(document).ready(function(){
             'xlink:href': '#pictogram',
             x: function(d) {
                 var remainder = d % columns;
-                return xPadding+(remainder*xBuffer);
+                return 10 + (remainder * (width / 10));
             },
             y: function(d) {
                 var whole = Math.floor(d/columns);
@@ -113,6 +113,35 @@ $(document).ready(function(){
             }
     });
     
+    
+    //Resize function
+    $(window).resize(function() {
+
+        if ($(window).width() < 768) {
+            width = container.width() * 0.9;
+        } else {
+            width = container.width() / 2;
+        }
+
+        aspect = width / container.height();
+        height = width / aspect;
+        useHeight = container.height() - 80;
+        
+        svg.attr({viewBox: '0 0 '+ width + ' ' + height });
+        
+        d3.selectAll('use')
+            .attr({
+                x: function(d, i) {
+                    var remainder = d % columns;
+                    return 10 + (remainder * (width / 10));
+                },
+                y: function(d) {
+                    var whole = Math.floor(d/columns);
+                    return yPadding + (whole * (useHeight / 10));
+                }
+            });
+        
+    });
    
     
 });

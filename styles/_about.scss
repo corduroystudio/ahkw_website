@@ -1,5 +1,5 @@
 .landing.aboutPage {
-    background: url(https://geoshepherds.github.io/ahkw_website/media/images/twitter_banner.jpg);
+    background: url(/media/images/twitter_banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -29,7 +29,7 @@ ul.expertGroup {
         div.profilePic {
             height: 100px;
             float: left;
-            @include profilePic('gareth', 'simon', 'sue', 'joanne', 'marianne', 'robert', 'malcolm', 'becca', 'richard');
+            @include profilePic('gareth', 'simon', 'sue', 'rebecca', 'marianne', 'robert', 'malcolm', 'becca', 'richard', 'chris');
         }
         div.profile {
             padding-left: 14px;

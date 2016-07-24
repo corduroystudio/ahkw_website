@@ -9,7 +9,7 @@ $(document).ready(function(){
     
     var data = [
         {key: 'Gaming', value: 53},
-        {key: 'Other than gaming', value: 64},
+        {key: 'Other than',key2: 'gaming', value: 64},
         {key: 'Watching',key2: 'entertainment', value: 68}
     ];
     

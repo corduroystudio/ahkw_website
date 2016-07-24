@@ -145,6 +145,7 @@ $(document).ready(function(){
             height: height
         });
         
+        
         xScale.range([margin, width - margin]);
         
         yScale.range([h - margin, margin]);
