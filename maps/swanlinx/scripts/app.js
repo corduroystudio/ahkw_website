@@ -106,7 +106,7 @@ $(document).ready(function() {
 
             } else if(layer === 'grip_male' || layer === 'grip_female') {
 
-                legendLabel = ['< 7', '7 - 15', '15 - 21', '21 - 31', '> 31'];
+                legendLabel = ['< 7', '7 - 14.9', '15 - 20.9', '21 - 30.9', '> 31'];
                 colorScale = d3.scale.threshold()
                     .domain([0, 7, 15, 21, 31])
                     .range([
@@ -142,7 +142,7 @@ $(document).ready(function() {
 
             } else if(layer === 'bleep_male') {
                 
-                legendLabel = ['< 13', '13 - 32', '32 - 52', '52 - 72', '> 72'];
+                legendLabel = ['< 13', '13 - 31.9', '32 - 51.9', '52 - 71.9', '> 72'];
                 colorScale = d3.scale.threshold()
                     .domain([0, 13, 32, 52, 72])
                     .range([
@@ -159,7 +159,7 @@ $(document).ready(function() {
 
             } else if(layer === 'bleep_female') {
 
-                legendLabel = ['< 7', '7 - 24', '24 - 44', '44 - 64', '> 64'];
+                legendLabel = ['< 7', '7 - 23.9', '24 - 43.9', '44 - 64', '> 64'];
                 colorScale = d3.scale.threshold()
                     .domain([0, 7, 24, 44, 64])
                     .range([
@@ -176,9 +176,9 @@ $(document).ready(function() {
 
             } else if(layer === 'sleep_time') {
                 
-                legendLabel = ['< 5.5', '5.5 - 6.5', '6.5 - 7.5', '7.5 - 10.5', '10.5 - 12', '12 - 13', '13 - 14.5'];
+                legendLabel = ['< 5.5', '5.5 - 6.4', '6.5 - 7.4', '7.5 - 9.4', '9.5 - 11.9', '12 - 12.9', '13 - 14.5'];
                 colorScale = d3.scale.threshold()
-                    .domain([0, 5.5, 6.5, 7.5, 10.5, 12, 13])
+                    .domain([0, 5.5, 6.5, 7.5, 9.5, 12, 13])
                     .range([
                         noData,
                         colorbrewer.RdYlGn[4][0],
@@ -195,9 +195,9 @@ $(document).ready(function() {
 
             } else if(layer === 'fruit_avg') {
 
-                legendLabel = ['< 1', '1-3', '3-6', '> 6'];
+                legendLabel = ['< 1', '1-3', '4', '> 5'];
                 colorScale = d3.scale.threshold()
-                    .domain([0, 1, 3, 6])
+                    .domain([1, 3, 4, 5])
                     .range([
                         noData,
                         colorbrewer.RdYlGn[4][0],
@@ -210,14 +210,16 @@ $(document).ready(function() {
                 return colorScale(data); 
 
             } else if(layer === 'fizzy_drinks') {            
-
-                legendLabel = ['Yes', 'No'];
+                
+                var roundedData = d3.round(data, 0);
+                
+                legendLabel = ['0','1 or more'];
                 colorScale = d3.scale.ordinal()
                     .domain([1, 2])
-                    .range([colorbrewer.RdYlGn[4][0], colorbrewer.RdYlGn[4][3]]);
+                    .range([colorbrewer.RdYlGn[4][3], colorbrewer.RdYlGn[4][0]]);
 
                 updateLegend(); // call update legend function
-                return colorScale(data);        
+                return colorScale(roundedData);        
 
             } 
             
