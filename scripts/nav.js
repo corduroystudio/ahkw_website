@@ -30,11 +30,11 @@ $(document).ready(function() {
         var url = $(this).context.baseURI;
         
         if ($('html').attr('lang') == 'en') {
-            if (url == '/') {
-                var newUrl = url.replace('/ahkw_website/', '/ahkw_website/cy/index');
+            if (url == 'http://activehealthykidswales.com/') {
+                var newUrl = url.replace('activehealthykidswales.com/', 'activehealthykidswales.com/cy/home');
                 $('a.cy').attr('href', newUrl);
-            } else if (url.indexOf('index') > -1) {
-                var newUrl = url.replace('/index', '/cy/index');
+            } else if (url.indexOf('home') > -1) {
+                var newUrl = url.replace('/home', '/cy/home');
                 $('a.cy').attr('href', newUrl);
             } else  if (url.indexOf('about') > -1){
                 var newUrl = url.replace('/about', '/cy/about');
@@ -48,7 +48,7 @@ $(document).ready(function() {
             }
             
         } else if ($('html').attr('lang') == 'cy') {
-            if (url.indexOf('about') > -1 || url.indexOf('index') > -1 || url.indexOf('report') > -1) {
+            if (url.indexOf('about') > -1 || url.indexOf('home') > -1 || url.indexOf('report') > -1) {
                 var newUrl = url.replace('/cy', '');
                 $('a.en').attr('href', newUrl);
             } else {
