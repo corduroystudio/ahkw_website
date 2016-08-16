@@ -28,9 +28,8 @@ $(document).ready(function() {
 
         //record current page uri
         var url = $(this).context.baseURI;
-
         if ($('html').attr('lang') == 'en') {
-            if (url == 'http://activehealthykidswales.com/' || url === 'http://activehealthykidswales.com') {
+            if (url == 'http://www.activehealthykidswales.com/') {
                 var newUrl = url.replace('activehealthykidswales.com/', 'activehealthykidswales.com/cy/home');
                 $('a.cy').attr('href', newUrl);
             } else if (url.indexOf('home') > -1) {
