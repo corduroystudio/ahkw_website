@@ -1,423 +1,527 @@
 <!DOCTYPE html>
-<html lang=en>
-<head>
-<title>AHKW | Organised Sports Indicator</title>
-<meta charset="utf-8">
-<meta name="viewport"               content="width=device-width, initial-scale=1.0">
-    
-<!-- SEO meta tags -->
-<meta name="description"            content="The key indicator showing the result of the research groups decision on organised sports for children in Wales">
-<meta name="keywords"               content="Active Healthy Kids Wales, Wales, sports, research, activity, children, health">
-<meta name="author"                 content="Geoshepherds">
-    
-<!-- Facebook -->
-<meta property="og:url"             content="http://activeheathykidswales.com">
-<meta property="og:title"           content="Active Healthy Kids Wales">
-<meta property="og:type"            content="article">
-<meta property="og:description"     content="The key indicator showing the result of the research groups decision on organised sports for children in Wales">
-<meta property="og:image"           content="http://activehealthykidswales.com/media/images/pic4.jpg">
+<html lang="en">
+  <head>
+    <title>AHKW | Organised Sports Indicator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card"           content="summary_large_image">
-<meta name="twitter:site"           content="@ahk_wales">
-<meta name="twitter:creator"        content="@ahk_wales">
-<meta name="twitter:title"          content="Active Healthy Kids Wales">
-<meta name="twitter:description"    content="The key indicator showing the result of the research groups decision on organised sports for children in Wales">
-<meta name="twitter:image"          content="http://activehealthykidswales.com/media/images/pic4.jpg">
-    
-<!-- favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="theme-color" content="#ffffff">
- 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- SEO meta tags -->
+    <meta
+      name="description"
+      content="The key indicator showing the result of the research groups decision on organised sports for children in Wales"
+    />
+    <meta
+      name="keywords"
+      content="Active Healthy Kids Wales, Wales, sports, research, activity, children, health"
+    />
+    <meta name="author" content="Geoshepherds" />
+
+    <!-- Facebook -->
+    <meta property="og:url" content="http://activeheathykidswales.com" />
+    <meta property="og:title" content="Active Healthy Kids Wales" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="The key indicator showing the result of the research groups decision on organised sports for children in Wales"
+    />
+    <meta
+      property="og:image"
+      content="http://activehealthykidswales.com/media/images/pic4.jpg"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ahk_wales" />
+    <meta name="twitter:creator" content="@ahk_wales" />
+    <meta name="twitter:title" content="Active Healthy Kids Wales" />
+    <meta
+      name="twitter:description"
+      content="The key indicator showing the result of the research groups decision on organised sports for children in Wales"
+    />
+    <meta
+      name="twitter:image"
+      content="http://activehealthykidswales.com/media/images/pic4.jpg"
+    />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--
+      HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-<link href='https://fonts.googleapis.com/css?family=Cantarell:400,700|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
-
-<link href="/styles/main.min.css" rel="stylesheet" type="text/css">
-<script src="https://use.fontawesome.com/67b86559db.js"></script>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Cantarell:400,700|Roboto+Slab:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link href="/main.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/67b86559db.js"></script>
+  </head>
+  <body>
     <nav>
-        <div class="menuContent">
-            <div class="column navColumn">
-                <a href="/home">
-                    Home
-                </a>
-                <a href="/report-card">
-                    Report Cards
-                </a>
-                <a href="/about">
-                    About
-                </a>
-            </div>
-            <div class="column mapColumn">
-                <a href="/maps/swanlinx/home" target="_blank">
-                    Swanlinx Map
-                </a>
-                <a href="/maps/dc/home" target="_blank">
-                    Dragon Challenge Map
-                </a>
-            </div>
-        </div> 
-        <div class="socialContent">
-            <div class="twitterWrapper">
-                <a class="social twitter fa fa-twitter fa-3x" href="https://twitter.com/AHK_Wales" target="_blank">
-                </a> 
-            </div>               
+      <div class="menuContent">
+        <div class="column navColumn">
+          <a href="/home"> Home </a> <a href="/report-card"> Report Cards </a>
+          <a href="/about"> About </a>
         </div>
+        <div class="column mapColumn">
+          <a href="/maps/swanlinx/home" target="_blank"> Swanlinx Map </a>
+          <a href="/maps/dc/home" target="_blank"> Dragon Challenge Map </a>
+        </div>
+      </div>
+      <div class="socialContent">
+        <div class="twitterWrapper">
+          <a
+            class="social twitter fa fa-twitter fa-3x"
+            href="https://twitter.com/AHK_Wales"
+            target="_blank"
+          >
+          </a>
+        </div>
+      </div>
     </nav>
     <div class="container">
-        
-        <header class="wide">
-            <button class="hamburger hamburger--spin" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-                <span class="hamburger-label menu is-active">menu</span>
-                <span class="hamburger-label close">close</span>
-            </button> 
-            
-            <div class="logo">
-                <img src="/media/images/ahkw_logo.svg" alt="Active Healthy Kids Wales logo" width="600" height="415">
-            </div>
-            
-            <div class="langSetting header">
-                <a class="en is-active">en</a>
-                <a class="cy">cy</a>
-            </div>
-        </header>
-        
-        <div class="wide landing indicatorPage">
-            <div class="card yellow indicatorPage">
+      <header class="wide">
+        <button class="hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+          <span class="hamburger-label menu is-active">menu</span>
+          <span class="hamburger-label close">close</span>
+        </button>
 
-                <div class="grade grade-c">
-                    c
-                </div>
-                <div class="cardTitle yellow">
-                    <h6 class="lower">
-                        Organised Sport Participation
-                    </h6>
-                    <span class="ui arrowRight">
-
-                    </span>
-                </div>
-                <div class="cardIcon">
-                    <img class="yellow" src="/media/icons/organisedsport-icon.svg">
-                </div>
-
-            </div>
-        
+        <div class="logo">
+          <img
+            src="/media/images/ahkw_logo.svg"
+            alt="Active Healthy Kids Wales logo"
+            width="600"
+            height="415"
+          />
         </div>
-        
-        <div class="section">
-            <h1>Recommendation</h1>
+
+        <div class="langSetting header">
+          <a class="en is-active">en</a> <a class="cy">cy</a>
+        </div>
+      </header>
+
+      <div class="wide landing indicatorPage">
+        <div class="card yellow indicatorPage">
+          <div class="grade grade-c">c</div>
+          <div class="cardTitle yellow">
+            <h6 class="lower">Organised Sport Participation</h6>
+            <span class="ui arrowRight"> </span>
+          </div>
+          <div class="cardIcon">
+            <img class="yellow" src="/media/icons/organisedsport-icon.svg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h1>Recommendation</h1>
+        <p>
+          There are currently no specific recommendations for the amount of
+          children and young people’s sport or dance participation. However, in
+          line with Sport Wales’ Vision of ‘Every Child Hooked on Sport for
+          Life’, the percentage of children ‘hooked on sport’ was used by the
+          Research Work Group as the benchmark for grading this indicator.
+        </p>
+      </div>
+
+      <div class="section">
+        <h1>Definitions</h1>
+        <p>
+          <span class="underline">For children ages 7-16 years old</span>
+          <br />The percentage of children who take part in sport on three or
+          more occasions a week, in an extracurricular (school-based) or a
+          community club setting. Curricular PE activity is not included.
+          <br /><br />
+          <span class="underline">For young people aged 16+ years old</span>
+          <br />The percentage of young people who take part in sport on three
+          or more occasions a week, in any setting.
+        </p>
+      </div>
+
+      <div class="section">
+        <h1>Survey Data</h1>
+        <p>
+          Two nationally representative surveys conducted by Sport Wales were
+          used by the Research Work Group to assign an organised sport
+          participation grade.
+        </p>
+      </div>
+
+      <div class="section">
+        <h6 class="chart-title">
+          Percentage of kids <br />
+          "hooked on sport"
+        </h6>
+      </div>
+
+      <div id="chart" class="section"></div>
+
+      <div class="wrapper rm"><a class="button" id="rmBtn"> Read More </a></div>
+
+      <div class="rmView">
+        <ol class="dataList">
+          <li>
+            <span class="dataNumber"> 1 </span>
             <p>
-                There are currently no specific recommendations for the amount of children and young people’s sport or dance participation. However, in line with Sport Wales’ Vision of ‘Every Child Hooked on Sport for Life’, the percentage of children ‘hooked on sport’ was used by the Research Work Group as the benchmark for grading this indicator.
+              <span class="underline">The School Sport Survey (2015)</span>
+              provides data on 115,398 children aged 7-16 years old from across
+              Wales. The survey showed that 48% of children were ‘hooked on
+              sport’ (children who take part in sport on three or more occasions
+              a week in an extracurricular or community club setting). These
+              data showed an upward trend in the percentage of children ‘hooked
+              on sport’ from 27, 40, and 48 percent in 2011, 2013 and 2015,
+              respectively. Moreover, similar proportions of primary (49%) and
+              secondary (48%) age school children were ‘hooked on sport’,
+              although more boys (52%) were ‘hooked on sport’ than girls (44%).
+              Even though there were differences by age, ethnicity, disability
+              and socioeconomic status, there has been an
+              <span class="italic bold"
+                >overall increase in the proportion of children ‘hooked on
+                sport’</span
+              >
+              between 2013 and 2015 for both boys and girls across all of these
+              subgroups (age, ethnicity, disability and socioeconomic status).
             </p>
-        </div>
-        
-        <div class="section">
-            <h1>Definitions</h1>
+          </li>
+          <li>
+            <span class="dataNumber"> 2 </span>
             <p>
-                <span class="underline">For children ages 7-16 years old</span>
-                <br>The percentage of children who take part in sport on three or more occasions a week, in an extracurricular (school-based) or a community club setting.  Curricular PE activity is not included.
-                <br><br>
-                <span class="underline">For young people aged 16+ years old</span>
-                <br>The percentage of young people who take part in sport on three or more occasions a week, in any setting. 
-
+              <span class="underline"
+                >The Further Education Sport Survey (2015)</span
+              >
+              collected data on 4,568 students aged 16+ years old from 12 FE
+              colleges across Wales. The survey showed that
+              <span class="italic bold"
+                >49% of students were ‘hooked on sport’</span
+              >
+              (take part in sport on three or more occasions a week, in any
+              setting). Specifically in the younger students aged 16-19 years
+              old, 52% of these students were ‘hooked on sport’. The findings in
+              relation to subgroups (gender, age, ethnicity, disability and
+              socioeconomic status) in this survey were very similar to findings
+              from the School Sport Survey (2015). However, trends could not be
+              established due to the survey data being in the first year of data
+              collection.
             </p>
+          </li>
+        </ol>
+        <div class="closeRM">
+          <div></div>
+          <h6 class="light">Close</h6>
         </div>
-        
-        <div class="section">
-            <h1>Survey Data</h1>
-            <p>
-                Two nationally representative surveys conducted by Sport Wales were used by the Research Work Group to assign an organised sport participation grade.  
-            </p>
-        </div>
-        
-        <div class="section">
-            <h6 class="chart-title">
-                Percentage of kids 
-                <br>
-                "hooked on sport"
-            </h6>
-        </div>
-        
-        <div id="chart" class="section"></div>
-        
-        <div class="wrapper rm">
-            <a class="button" id="rmBtn">
-                Read More
-            </a>
-        </div>
-        
-        <div class="rmView">
-            <ol class="dataList">
-                <li>
-                    <span class="dataNumber">
-                        1
-                    </span>
-                    <p>
-                        <span class="underline">The School Sport Survey (2015)</span> provides data on 115,398 children aged 7-16 years old from across Wales. The survey showed that 48% of children were ‘hooked on sport’ (children who take part in sport on three or more occasions a week in an extracurricular or community club setting). These data showed an upward trend in the percentage of children ‘hooked on sport’ from 27, 40, and 48 percent in 2011, 2013 and 2015, respectively. Moreover, similar proportions of primary (49%) and secondary (48%) age school children were ‘hooked on sport’, although more boys (52%) were ‘hooked on sport’ than girls (44%). Even though there were differences by age, ethnicity, disability and socioeconomic status, there has been an <span class="italic bold">overall increase in the proportion of children ‘hooked on sport’</span> between 2013 and 2015 for both boys and girls across all of these subgroups (age, ethnicity, disability and socioeconomic status). 
-                    </p>
-                </li>
-                <li>
-                    <span class="dataNumber">
-                        2
-                    </span>
-                    <p>
-                        <span class="underline">The Further Education Sport Survey (2015)</span> collected data on 4,568 students aged 16+ years old from 12 FE colleges across Wales. The survey showed that <span class="italic bold">49% of students were ‘hooked on sport’</span> (take part in sport on three or more occasions a week, in any setting). Specifically in the younger students aged 16-19 years old, 52% of these students were ‘hooked on sport’. The findings in relation to subgroups (gender, age, ethnicity, disability and socioeconomic status) in this survey were very similar to findings from the School Sport Survey (2015). However, trends could not be established due to the survey data being in the first year of data collection.
-                    </p>
-                </li>
-            </ol>
-            <div class="closeRM">
-                <div></div>
-                <h6 class="light">Close</h6>
-            </div>
-        </div>
-        
-        <div class="indicatorExpand">
-            <div class="wide">
-                <div class="expand xtraDarkBlue">
-                    <h5 class="light xtraDarkBlue">
-                        <div></div>
-                        Deciding on a Grade
-                    </h5>
-                </div>
-                
-                <div class="expandContent grade">
-                    <p>
-                        The Research Working Group concluded that the increase in the proportion of children ‘hooked on sport’, and the finding that at least 40% of children in each subgroup (gender, ethnicity, socioeconomic status and disability) were ‘hooked on sport’, was sufficient to warrant an increase in the grade from a C- in 2014 to a C in the 2016 Report Card.
-                    </p>
-                </div>
-            </div>
+      </div>
 
-            <div class="wide">
-                <div class="expand darkBlue">
-                    <h5 class="light darkBlue">
-                        <div></div>
-                        Considerations
-                    </h5>
-                </div>
-                <div class="expandContent considerations">
-                    <ul>
-                        <li>
-                            School Sport Survey and the Further Education Sport Survey both used self-report methods, although, a major strength of the School Sport Survey is its reach coverage, with the 2015 survey being the largest to date and the largest survey of its kind in the UK. 
-                        </li>
-                        <li>
-                            Both surveys do not capture the duration of the sport sessions that children and young people take part in.
-                        </li>
-                        <li>
-                            Although there is a lack of evidence on children of early years (under 5 years old), there is strong evidence on all ages of children and young people from  7 years old to 19+ years old. This was not available in the previous Report Card.
-                        </li>
-                        <li>
-                            The best available evidence shows that there has been an increase in children and young people being ‘hooked on sport’. However, a significant effort by all still needs to be made to increase the proportion of ‘hooked on sport’.  As well as, to achieve Sport Wales’ target of “75% of children and young people ‘hooked on sport’ by 2026”. 
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="wide">
-                <div class="expand blue">
-                    <h5 class="light blue">
-                        <div></div>
-                        How to Improve
-                    </h5>
-                </div>
-                <div class="expandContent improve">
-                    <ul class="indent" aria-label="Sport Wales">
-                        <li>
-                            Community Sport &#45;
-                            <a href="http://ourambitiousjourney.sport.wales/" target="_blank">
-                                link
-                            </a>
-                        </li>
-                        <li>
-                            Physical Literacy &#45;
-                            <a href="http://physicalliteracy.sportwales.org.uk/en/" target="_blank">
-                                link
-                            </a>
-                        </li>
-                        <li>
-                            5 x 60 &#45;
-                            <a href="http://sport.wales/community-sport/education/5x60.aspx" target="_blank">
-                                link
-                            </a>
-                        </li>
-                        <li>
-                            Dragon Multi Skills &amp; Sport &#45;
-                            <a href="http://sport.wales/community-sport/education/dragon-multi-skills--sport.aspx" target="_blank">
-                                link
-                            </a>
-                        </li>
-                    </ul>
-                    
-                    <ul class="indent" aria-label="Netmums">
-                        <li>
-                            After School Activities &#45;
-                            <a href="http://www.netmums.com/sw-wales/places-to-go/after-school-activities" target="_blank">
-                                link
-                            </a>
-                        </li>
-                    </ul>
-                    
-                    <ul class="indent" aria-label="Disability Sport Wales">
-                        <li>
-                            Clubs &#45;
-                            <a href="http://www.disabilitysportwales.com/clubs/" target="_blank">
-                                link
-                            </a>
-                        </li>
-                        <li>
-                            Cerebral Palsy Sport &#45;
-                            <a href="http://www.cpsport.org/" target="_blank">
-                                link
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="wide">
-                <div class="expand lightBlue">
-                    <h5 class="light lightBlue">
-                        <div></div>
-                        Data Sources
-                    </h5>
-                </div>
-                <div class="expandContent sources">
-                    <ul class="indent" aria-label="Sport Wales">
-                        <li>
-                            School Sport Survey 2015 &#45;
-                            <a href="http://sportwales.org.uk/research--policy/surveys-and-statistics/school-sport-survey.aspx" target="_blank">
-                                link
-                            </a>
-                        </li>
-                        <li>
-                            Further Education Sport Survey 2015 &#45;
-                            <a href="http://sport.wales/media/1667685/further_education_sport_survey_-_state_of_the_nation_2015_english__final__2.pdf" target="_blank">
-                                link
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
+      <div class="indicatorExpand">
         <div class="wide">
-            <a href="/indicators/outdoor-play">
-                <div class="card yellow link nextIndicator">
+          <div class="expand xtraDarkBlue">
+            <h5 class="light xtraDarkBlue">
+              <div></div>
+              Deciding on a Grade
+            </h5>
+          </div>
 
-                    <div class="grade grade-c">
-                        c
-                    </div>
-                    <div class="cardTitle yellow">
-                        <h6 class="lower">
-                            Outdoor and Active Play
-                            <span class="ui arrowRight">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                width="58.904px" height="18.471px" viewBox="0 0 58.904 18.471" enable-background="new 0 0 58.904 18.471" xml:space="preserve">
-                                    <g>
-                                        <path fill="#fff" d="M58.604,9.92c0.401-0.376,0.401-0.993,0-1.369l-8.875-8.34C49.328-0.166,49-0.023,49,0.526v6.709
+          <div class="expandContent grade">
+            <p>
+              The Research Working Group concluded that the increase in the
+              proportion of children ‘hooked on sport’, and the finding that at
+              least 40% of children in each subgroup (gender, ethnicity,
+              socioeconomic status and disability) were ‘hooked on sport’, was
+              sufficient to warrant an increase in the grade from a C- in 2014
+              to a C in the 2016 Report Card.
+            </p>
+          </div>
+        </div>
+
+        <div class="wide">
+          <div class="expand darkBlue">
+            <h5 class="light darkBlue">
+              <div></div>
+              Considerations
+            </h5>
+          </div>
+          <div class="expandContent considerations">
+            <ul>
+              <li>
+                School Sport Survey and the Further Education Sport Survey both
+                used self-report methods, although, a major strength of the
+                School Sport Survey is its reach coverage, with the 2015 survey
+                being the largest to date and the largest survey of its kind in
+                the UK.
+              </li>
+              <li>
+                Both surveys do not capture the duration of the sport sessions
+                that children and young people take part in.
+              </li>
+              <li>
+                Although there is a lack of evidence on children of early years
+                (under 5 years old), there is strong evidence on all ages of
+                children and young people from 7 years old to 19+ years old.
+                This was not available in the previous Report Card.
+              </li>
+              <li>
+                The best available evidence shows that there has been an
+                increase in children and young people being ‘hooked on sport’.
+                However, a significant effort by all still needs to be made to
+                increase the proportion of ‘hooked on sport’. As well as, to
+                achieve Sport Wales’ target of “75% of children and young people
+                ‘hooked on sport’ by 2026”.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="wide">
+          <div class="expand blue">
+            <h5 class="light blue">
+              <div></div>
+              How to Improve
+            </h5>
+          </div>
+          <div class="expandContent improve">
+            <ul class="indent" aria-label="Sport Wales">
+              <li>
+                Community Sport &#45;
+                <a
+                  href="http://ourambitiousjourney.sport.wales/"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+              <li>
+                Physical Literacy &#45;
+                <a
+                  href="http://physicalliteracy.sportwales.org.uk/en/"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+              <li>
+                5 x 60 &#45;
+                <a
+                  href="http://sport.wales/community-sport/education/5x60.aspx"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+              <li>
+                Dragon Multi Skills &amp; Sport &#45;
+                <a
+                  href="http://sport.wales/community-sport/education/dragon-multi-skills--sport.aspx"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+            </ul>
+
+            <ul class="indent" aria-label="Netmums">
+              <li>
+                After School Activities &#45;
+                <a
+                  href="http://www.netmums.com/sw-wales/places-to-go/after-school-activities"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+            </ul>
+
+            <ul class="indent" aria-label="Disability Sport Wales">
+              <li>
+                Clubs &#45;
+                <a
+                  href="http://www.disabilitysportwales.com/clubs/"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+              <li>
+                Cerebral Palsy Sport &#45;
+                <a href="http://www.cpsport.org/" target="_blank"> link </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="wide">
+          <div class="expand lightBlue">
+            <h5 class="light lightBlue">
+              <div></div>
+              Data Sources
+            </h5>
+          </div>
+          <div class="expandContent sources">
+            <ul class="indent" aria-label="Sport Wales">
+              <li>
+                School Sport Survey 2015 &#45;
+                <a
+                  href="http://sportwales.org.uk/research--policy/surveys-and-statistics/school-sport-survey.aspx"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+              <li>
+                Further Education Sport Survey 2015 &#45;
+                <a
+                  href="http://sport.wales/media/1667685/further_education_sport_survey_-_state_of_the_nation_2015_english__final__2.pdf"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="wide">
+        <a href="/indicators/outdoor-play">
+          <div class="card yellow link nextIndicator">
+            <div class="grade grade-c">c</div>
+            <div class="cardTitle yellow">
+              <h6 class="lower">
+                Outdoor and Active Play
+                <span class="ui arrowRight">
+                  <svg
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="58.904px"
+                    height="18.471px"
+                    viewBox="0 0 58.904 18.471"
+                    enable-background="new 0 0 58.904 18.471"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <path
+                        fill="#fff"
+                        d="M58.604,9.92c0.401-0.376,0.401-0.993,0-1.369l-8.875-8.34C49.328-0.166,49-0.023,49,0.526v6.709
                                             c0,0.55-0.45,1-1,1H1c-0.55,0-1,0.45-1,1l0,0c0,0.55,0.45,1,1,1h47c0.55,0,1,0.45,1,1v6.709c0,0.55,0.328,0.692,0.729,0.315
-                                            L58.604,9.92z"/>
-                                    </g>
-                                </svg>
-                            </span>
-                        </h6>
-                    </div>
-                    <div class="cardIcon">
-                        <img class="yellow" src="/media/icons/outdoor-icon.svg">
-                    </div>
-
-                </div>
-            </a>
-        </div>
-        
-        
-        <div class="wide">
-            <a href="https://twitter.com/hashtag/AHKWales?src=hash" target="_blank">
-                <div class="twitterHashtag teal">
-                    <h6 class="lower light teal">
-                        &#35;AHKWales
-                    </h6>
-                </div>
-            </a>
-        </div>
-        <div class="preFooter-nav wide">
-            <div class="menuContent">
-                <div class="column navColumn">
-                    <a href="/home">
-                        Home
-                    </a>
-                    <a href="/report-card">
-                        Report Cards
-                    </a>
-                    <a href="/about">
-                        About
-                    </a>
-                </div>
-                <div class="column mapColumn">
-                    <a href="/maps/swanlinx/home" target="_blank">
-                        Swanlinx Map
-                    </a>
-                    <a href="/maps/dc/home" target="_blank">
-                        Dragon Challenge Map
-                    </a>
-                </div>
-            </div>
-        </div>
-        <footer class="wide">
-            <div class="footerInfo">
-                <i class="fa fa-copyright" aria-hidden="true"></i>
-                <span class="copyright">
-                    copyright 2016 &#124;
-                </span> 
-                <span class="siteBy">
-                     site by <a href="http://geoshepherds.com" target="_blank">geoshepherds</a>
-                </span>               
-            </div>
-            <div class="ui-BackToTop">
-               <span>
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-         width="18.47px" height="58.904px" viewBox="0 0 18.47 58.904" enable-background="new 0 0 18.47 58.904" xml:space="preserve">
-                        <g>
-                            <path fill="#299ad6" d="M9.919,0.3c-0.376-0.4-0.993-0.4-1.369,0L0.21,9.342c-0.376,0.4-0.234,0.896,0.315,0.896h6.709
-                                c0.55,0,1.334,0.116,1.334,0.666v47c0,0.55,0.45,1,1,1l0,0c0.55,0,1-0.45,1-1v-47c0-0.55,0.116-0.666,0.666-0.666h6.709
-                                c0.55,0,0.692-0.495,0.315-0.896L9.919,0.3z"/>
-                        </g>
-                    </svg>
+                                            L58.604,9.92z"
+                      />
+                    </g>
+                  </svg>
                 </span>
-                <div class="ui-content">
-                    back to top
-                </div>
-            </div> 
-        </footer>
-    
-    </div> <!-- closing container tag --> 
+              </h6>
+            </div>
+            <div class="cardIcon">
+              <img class="yellow" src="/media/icons/outdoor-icon.svg" />
+            </div>
+          </div>
+        </a>
+      </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="/scripts/indicators/organised-sports.js"></script>
-<script src="/scripts/indicator.js"></script>
-<script src="/scripts/nav.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      <div class="wide">
+        <a href="https://twitter.com/hashtag/AHKWales?src=hash" target="_blank">
+          <div class="twitterHashtag teal">
+            <h6 class="lower light teal">&#35;AHKWales</h6>
+          </div>
+        </a>
+      </div>
+      <div class="preFooter-nav wide">
+        <div class="menuContent">
+          <div class="column navColumn">
+            <a href="/home"> Home </a>
+            <a href="/report-card"> Report Cards </a>
+            <a href="/about"> About </a>
+          </div>
+          <div class="column mapColumn">
+            <a href="/maps/swanlinx/home" target="_blank"> Swanlinx Map </a>
+            <a href="/maps/dc/home" target="_blank"> Dragon Challenge Map </a>
+          </div>
+        </div>
+      </div>
+      <footer class="wide">
+        <div class="footerInfo">
+          <i class="fa fa-copyright" aria-hidden="true"></i>
+          <span class="copyright"> copyright 2016 &#124; </span>
+          <span class="siteBy">
+            site by
+            <a href="http://geoshepherds.com" target="_blank">geoshepherds</a>
+          </span>
+        </div>
+        <div class="ui-BackToTop">
+          <span>
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="18.47px"
+              height="58.904px"
+              viewBox="0 0 18.47 58.904"
+              enable-background="new 0 0 18.47 58.904"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  fill="#299ad6"
+                  d="M9.919,0.3c-0.376-0.4-0.993-0.4-1.369,0L0.21,9.342c-0.376,0.4-0.234,0.896,0.315,0.896h6.709
+                                c0.55,0,1.334,0.116,1.334,0.666v47c0,0.55,0.45,1,1,1l0,0c0.55,0,1-0.45,1-1v-47c0-0.55,0.116-0.666,0.666-0.666h6.709
+                                c0.55,0,0.692-0.495,0.315-0.896L9.919,0.3z"
+                />
+              </g>
+            </svg>
+          </span>
+          <div class="ui-content">back to top</div>
+        </div>
+      </footer>
+    </div>
+    <!-- closing container tag -->
 
-  ga('create', 'UA-81271313-1', 'auto');
-  ga('send', 'pageview');
-</script>
-</body> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="/scripts/indicators/organised-sports.js"></script>
+    <script src="/scripts/indicator.js"></script>
+    <script src="/scripts/nav.js"></script>
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
+      ga("create", "UA-81271313-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
 </html>

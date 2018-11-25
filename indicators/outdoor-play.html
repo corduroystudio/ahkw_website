@@ -1,410 +1,516 @@
 <!DOCTYPE html>
-<html lang=en>
-<head>
-<title>AHKW | Outdoor Play Indicator</title>
-<meta charset="utf-8">
-<meta name="viewport"               content="width=device-width, initial-scale=1.0">
-    
-<!-- SEO meta tags -->
-<meta name="description"            content="The key indicator showing the result of the research groups decision on outdoor play for children in Wales">
-<meta name="keywords"               content="Active Healthy Kids Wales, Wales, sports, research, activity, children, health">
-<meta name="author"                 content="Geoshepherds">
-    
-<!-- Facebook -->
-<meta property="og:url"             content="http://activeheathykidswales.com">
-<meta property="og:title"           content="Active Healthy Kids Wales">
-<meta property="og:type"            content="article">
-<meta property="og:description"     content="The key indicator showing the result of the research groups decision on outdoor play for children in Wales">
-<meta property="og:image"           content="http://activehealthykidswales.com/media/images/pic4.jpg">
+<html lang="en">
+  <head>
+    <title>AHKW | Outdoor Play Indicator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card"           content="summary_large_image">
-<meta name="twitter:site"           content="@ahk_wales">
-<meta name="twitter:creator"        content="@ahk_wales">
-<meta name="twitter:title"          content="Active Healthy Kids Wales">
-<meta name="twitter:description"    content="The key indicator showing the result of the research groups decision on outdoor play for children in Wales">
-<meta name="twitter:image"          content="http://activehealthykidswales.com/media/images/pic4.jpg">
-    
-<!-- favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="theme-color" content="#ffffff">
- 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- SEO meta tags -->
+    <meta
+      name="description"
+      content="The key indicator showing the result of the research groups decision on outdoor play for children in Wales"
+    />
+    <meta
+      name="keywords"
+      content="Active Healthy Kids Wales, Wales, sports, research, activity, children, health"
+    />
+    <meta name="author" content="Geoshepherds" />
+
+    <!-- Facebook -->
+    <meta property="og:url" content="http://activeheathykidswales.com" />
+    <meta property="og:title" content="Active Healthy Kids Wales" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="The key indicator showing the result of the research groups decision on outdoor play for children in Wales"
+    />
+    <meta
+      property="og:image"
+      content="http://activehealthykidswales.com/media/images/pic4.jpg"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ahk_wales" />
+    <meta name="twitter:creator" content="@ahk_wales" />
+    <meta name="twitter:title" content="Active Healthy Kids Wales" />
+    <meta
+      name="twitter:description"
+      content="The key indicator showing the result of the research groups decision on outdoor play for children in Wales"
+    />
+    <meta
+      name="twitter:image"
+      content="http://activehealthykidswales.com/media/images/pic4.jpg"
+    />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--
+      HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-<link href='https://fonts.googleapis.com/css?family=Cantarell:400,700|Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
-
-<link href="/styles/main.min.css" rel="stylesheet" type="text/css">
-<script src="https://use.fontawesome.com/67b86559db.js"></script>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Cantarell:400,700|Roboto+Slab:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link href="/main.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/67b86559db.js"></script>
+  </head>
+  <body>
     <nav>
-        <div class="menuContent">
-            <div class="column navColumn">
-                <a href="/home">
-                    Home
-                </a>
-                <a href="/report-card">
-                    Report Cards
-                </a>
-                <a href="/about">
-                    About
-                </a>
-            </div>
-            <div class="column mapColumn">
-                <a href="/maps/swanlinx/home" target="_blank">
-                    Swanlinx Map
-                </a>
-                <a href="/maps/dc/home" target="_blank">
-                    Dragon Challenge Map
-                </a>
-            </div>
-        </div> 
-        <div class="socialContent">
-            <div class="twitterWrapper">
-                <a class="social twitter fa fa-twitter fa-3x" href="https://twitter.com/AHK_Wales" target="_blank">
-                </a> 
-            </div>              
+      <div class="menuContent">
+        <div class="column navColumn">
+          <a href="/home"> Home </a> <a href="/report-card"> Report Cards </a>
+          <a href="/about"> About </a>
         </div>
+        <div class="column mapColumn">
+          <a href="/maps/swanlinx/home" target="_blank"> Swanlinx Map </a>
+          <a href="/maps/dc/home" target="_blank"> Dragon Challenge Map </a>
+        </div>
+      </div>
+      <div class="socialContent">
+        <div class="twitterWrapper">
+          <a
+            class="social twitter fa fa-twitter fa-3x"
+            href="https://twitter.com/AHK_Wales"
+            target="_blank"
+          >
+          </a>
+        </div>
+      </div>
     </nav>
     <div class="container">
-        
-        <header class="wide">
-            <button class="hamburger hamburger--spin" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-                <span class="hamburger-label menu is-active">menu</span>
-                <span class="hamburger-label close">close</span>
-            </button> 
-            
-            <div class="logo">
-                <img src="/media/images/ahkw_logo.svg" alt="Active Healthy Kids Wales logo" width="600" height="415">
-            </div>
-            
-            <div class="langSetting header">
-                <a class="en is-active">en</a>
-                <a class="cy">cy</a>
-            </div>
-        </header>
-        
-        <div class="wide landing indicatorPage">
-            <div class="card yellow indicatorPage">
+      <header class="wide">
+        <button class="hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+          <span class="hamburger-label menu is-active">menu</span>
+          <span class="hamburger-label close">close</span>
+        </button>
 
-                <div class="grade grade-c">
-                    c
-                </div>
-                <div class="cardTitle yellow">
-                    <h6 class="lower">
-                        Outdoor and Active Play
-                    </h6>
-                    <span class="ui arrowRight">
-
-                    </span>
-                </div>
-                <div class="cardIcon">
-                    <img class="yellow" src="/media/icons/outdoor-icon.svg">
-                </div>
-
-            </div>
-        
+        <div class="logo">
+          <img
+            src="/media/images/ahkw_logo.svg"
+            alt="Active Healthy Kids Wales logo"
+            width="600"
+            height="415"
+          />
         </div>
-        
-        <div class="section">
-            <h1>Recommendation</h1>
+
+        <div class="langSetting header">
+          <a class="en is-active">en</a> <a class="cy">cy</a>
+        </div>
+      </header>
+
+      <div class="wide landing indicatorPage">
+        <div class="card yellow indicatorPage">
+          <div class="grade grade-c">c</div>
+          <div class="cardTitle yellow">
+            <h6 class="lower">Outdoor and Active Play</h6>
+            <span class="ui arrowRight"> </span>
+          </div>
+          <div class="cardIcon">
+            <img class="yellow" src="/media/icons/outdoor-icon.svg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h1>Recommendation</h1>
+        <p>
+          There are currently no specific recommendations for the duration of
+          time spent in active play or the amount of time being active outdoors.
+          However, outdoor and active play contributes to overall physical
+          activity. Age specific physical activity guidelines can be found under
+          the ‘overall physical activity level’ indicator.
+        </p>
+      </div>
+
+      <div class="section">
+        <h1>Definitions</h1>
+        <p>
+          Evidence suggests that children are more active when they are outside.
+          Therefore, in the previous Report Card (2014), ‘use of the park’ was
+          used solely to establish the grade for this indicator. For the 2016
+          Report Card, the Research Work Group used the proportion of children
+          using a variety of places for play as the benchmark for grading this
+          indicator, as well as, the percentage of children reported spending
+          &ge; 3 hours outside playing.
+        </p>
+      </div>
+
+      <div class="section">
+        <h1>Survey Data</h1>
+        <p>
+          A large nationally representative survey conducted by Sport Wales and
+          a smaller but still nationwide survey on play conducted as part of the
+          Little Voices Shouting out Report, were used by the Research Work
+          Group to assign an outdoor and active play grade.
+        </p>
+      </div>
+
+      <div class="section">
+        <h6 class="chart-title">
+          Percentage of children using these areas for play
+        </h6>
+      </div>
+
+      <div id="chart" class="section"></div>
+
+      <div class="wrapper rm"><a class="button" id="rmBtn"> Read More </a></div>
+
+      <div class="rmView">
+        <ol class="dataList">
+          <li>
+            <span class="dataNumber"> 1 </span>
             <p>
-                There are currently no specific recommendations for the duration of time spent in active play or the amount of time being active outdoors. However, outdoor and active play contributes to overall physical activity. Age specific physical activity guidelines can be found under the ‘overall physical activity level’ indicator.
+              <span class="underline">The School Sport Survey (2015)</span>
+              provides data on 115,398 children aged 7-16 years old from across
+              Wales. Data on the proportion of children and youth using ‘streets
+              near home or school' (43%), ‘park' (61%), ‘playground not at
+              school' (38%), ‘playing fields at school' (48%), ‘playing fields
+              not at school' (50%) and ‘beach/sea' (42%) for places of
+              exercise/play in the previous year were synthesised to give an
+              overall proportion of
+              <span class="italic bold"
+                >47% of children and youth using at least one of these
+                places</span
+              >
+              (School Sport Survey 2015).
             </p>
-        </div>
-        
-        <div class="section">
-            <h1>Definitions</h1>
+          </li>
+          <li>
+            <span class="dataNumber"> 2 </span>
             <p>
-                Evidence suggests that children are more active when they are outside. Therefore, in the previous Report Card (2014), ‘use of the park’ was used solely to establish the grade for this indicator. For the 2016 Report Card, the Research Work Group used the proportion of children using a variety of places for play as the benchmark for grading this indicator, as well as, the percentage of children reported spending &ge; 3 hours outside playing.
+              <span class="underline">The Little Voices Shouting Out</span>
+              survey of children aged 7-11 years from across Wales reported that
+              18% spent 3 hours, 15% 4 hours and 27% more than 4 hours playing
+              outside on a normal day. Therefore,
+              <span class="italic bold"
+                >60% of children reporting spending &ge;3 hours outside
+                playing.</span
+              >
             </p>
+          </li>
+        </ol>
+        <div class="closeRM">
+          <div></div>
+          <h6 class="light">Close</h6>
         </div>
-        
-        <div class="section">
-            <h1>Survey Data</h1>
-            <p>
-                A large nationally representative survey conducted by Sport Wales and a smaller but still nationwide survey on play conducted as part of the Little Voices Shouting out Report, were used by the Research Work Group to assign an outdoor and active play grade.  
-            </p>
-        </div>
-        
-        <div class="section">
-            <h6 class="chart-title">
-                Percentage of children using these areas for play
-            </h6>
-        </div>
-        
-        <div id="chart" class="section"></div>
-        
-        <div class="wrapper rm">
-            <a class="button" id="rmBtn">
-                Read More
-            </a>
-        </div>
-        
-        <div class="rmView">
-            <ol class="dataList">
-                <li>
-                    <span class="dataNumber">
-                        1
-                    </span>
-                    <p>
-                        <span class="underline">The School Sport Survey (2015)</span> provides data on 115,398 children aged 7-16 years old from across Wales.  Data on the proportion of children and youth using ‘streets near home or school' (43%), ‘park' (61%), ‘playground not at school' (38%), ‘playing fields at school' (48%), ‘playing fields not at school' (50%) and ‘beach/sea' (42%) for places of exercise/play in the previous year were synthesised to give an overall proportion of <span class="italic bold">47% of children and youth using at least one of these places</span> (School Sport Survey 2015).
-                    </p>
-                </li>
-                <li>
-                    <span class="dataNumber">
-                        2
-                    </span>
-                    <p>
-                        <span class="underline">The Little Voices Shouting Out</span> survey of children aged 7-11 years from across Wales reported that 18% spent 3 hours, 15% 4 hours and 27% more than 4 hours playing outside on a normal day. Therefore, <span class="italic bold">60% of children reporting spending &ge;3 hours outside playing.</span>
-                    </p>
-                </li>
-            </ol>
-            <div class="closeRM">
-                <div></div>
-                <h6 class="light">Close</h6>
-            </div>
-        </div>
-        
-        <div class="indicatorExpand">
-            <div class="wide">
-                <div class="expand xtraDarkBlue">
-                    <h5 class="light xtraDarkBlue">
-                        <div></div>
-                        Deciding on a Grade
-                    </h5>
-                </div>
-                
-                <div class="expandContent grade">
-                    <p>
-                        The grade for this indicator has not changed since 2014 although more data were available to support the 2016 grade. In the previous Report Card, ‘use of the park’ was used solely to establish the grade for this indicator. In the 2016 Report Card, the Research Work Group agreed that the proportion of children using a variety of places for play should be considered. Therefore, the use of streets near home or school, the park, playground not at school, playing fields at school, playing fields not at school and beach/sea for places of exercise/play were all taken into account during the grading process. The synthesised data of all of these places gave an overall proportion of 47% of children and youth using at least one of these places for exercise/play. This proportion falls within the C grade. The Research Work Group also concluded that 60% of children reporting spending ≥3 hours outside playing were commensurate with a C grade.
-                    </p>
-                </div>
-            </div>
+      </div>
 
-            <div class="wide">
-                <div class="expand darkBlue">
-                    <h5 class="light darkBlue">
-                        <div></div>
-                        Considerations
-                    </h5>
-                </div>
-                <div class="expandContent considerations">
-                    <ul>
-                        <li>
-                            School Sport Survey used self-report methods, although, a major strength of the School Sport Survey is its reach coverage, with the 2015 survey being the largest to date and the largest survey of its kind in the UK.
-                        </li>
-                        <li>
-                            Although there is a lack of evidence on children of early years (under 5 years old), there is strong evidence on all ages of children and young people from  7 years old to 16 years old. This was not available in the previous Report Card.
-                        </li>
-                        <li>
-                            The best available evidence shows that in terms of Outdoor and Active Play, Wales are only succeeding with about half	 of children and young people. Research suggests that given the opportunity, children get wide-ranging exercise as well as significant mental health benefits from freely chosen play.  All children and young people need to play. Play is fundamental to the healthy development and well-being of individuals and communities, therefore encouragement towards getting children outdoors playing is a necessity.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="wide">
-                <div class="expand blue">
-                    <h5 class="light blue">
-                        <div></div>
-                        How to Improve
-                    </h5>
-                </div>
-                <div class="expandContent improve">
-                    <ul class="indent" aria-label="Play Wales">
-                        <li>
-                            Playing Out &#45;
-                            <a href="http://playwales.org.uk/eng/playingout" target="_blank">
-                                link
-                            </a>
-                        </li>
-                        <li>
-                            Promoting Physical Activity through Outdoor Play (early years) &#45;
-                            <a href="http://playwales.org.uk/login/uploaded/documents/INFORMATION%20SHEETS/Promoting%20physical%20activity%20through%20outdoor%20play%20in%20early%20years%20settings.pdf" target="_blank">
-                                link
-                            </a>
-                        </li>
-                    </ul>
-                    
-                    <ul class="indent" aria-label="Change4Life">
-                        <li>
-                            Get Going &#45;
-                            <a href="http://change4lifewales.org.uk/families/get-going-campaign/get-going/?lang=en" target="_blank">
-                                link
-                            </a>
-                        </li>
-                        <li>
-                            Play4Life &#45;
-                            <a href="http://www.nhs.uk/Change4Life/supporter-resources/downloads/297553_P4L_outdoor_acc2.pdf" target="_blank">
-                                link
-                            </a>
-                        </li>
-                    </ul>
-                    
-                    <ul class="indent" aria-label="Sustrans Wales">
-                        <li>
-                            Free Range Kids Campaign &#45;
-                            <a href="http://www.sustrans.org.uk/what-you-can-do/children-and-families" target="_blank">
-                                link
-                            </a>
-                        </li>
-                    </ul>
-                    
-                    <ul class="indent" aria-label="Miscellaneous">
-                        <li>
-                            Playing Out &#45;
-                            <a href="http://playingout.net/" target="_blank">
-                                link
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="wide">
-                <div class="expand lightBlue">
-                    <h5 class="light lightBlue">
-                        <div></div>
-                        Data Sources
-                    </h5>
-                </div>
-                <div class="expandContent sources">
-                    <ul class="indent" aria-label="Sport Wales">
-                        <li>
-                            School Sport Survey 2015 &#45;
-                            <a href="http://sportwales.org.uk/research--policy/surveys-and-statistics/school-sport-survey.aspx" target="_blank">
-                                link
-                            </a>
-                        </li>
-                        <li>
-                            Little Voices Shouting Out Report 2015 &#45;
-                            <a href="https://www.swansea.ac.uk/media/Little%20Voices%20Report.pdf" target="_blank">
-                                link
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
+      <div class="indicatorExpand">
         <div class="wide">
-            <a href="/indicators/active-transport">
-                <div class="card yellow link nextIndicator">
+          <div class="expand xtraDarkBlue">
+            <h5 class="light xtraDarkBlue">
+              <div></div>
+              Deciding on a Grade
+            </h5>
+          </div>
 
-                    <div class="grade grade-c">
-                        c
-                    </div>
-                    <div class="cardTitle yellow">
-                        <h6 class="lower">
-                            Active Transportation
-                            <span class="ui arrowRight">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                width="58.904px" height="18.471px" viewBox="0 0 58.904 18.471" enable-background="new 0 0 58.904 18.471" xml:space="preserve">
-                                    <g>
-                                        <path fill="#fff" d="M58.604,9.92c0.401-0.376,0.401-0.993,0-1.369l-8.875-8.34C49.328-0.166,49-0.023,49,0.526v6.709
+          <div class="expandContent grade">
+            <p>
+              The grade for this indicator has not changed since 2014 although
+              more data were available to support the 2016 grade. In the
+              previous Report Card, ‘use of the park’ was used solely to
+              establish the grade for this indicator. In the 2016 Report Card,
+              the Research Work Group agreed that the proportion of children
+              using a variety of places for play should be considered.
+              Therefore, the use of streets near home or school, the park,
+              playground not at school, playing fields at school, playing fields
+              not at school and beach/sea for places of exercise/play were all
+              taken into account during the grading process. The synthesised
+              data of all of these places gave an overall proportion of 47% of
+              children and youth using at least one of these places for
+              exercise/play. This proportion falls within the C grade. The
+              Research Work Group also concluded that 60% of children reporting
+              spending ≥3 hours outside playing were commensurate with a C
+              grade.
+            </p>
+          </div>
+        </div>
+
+        <div class="wide">
+          <div class="expand darkBlue">
+            <h5 class="light darkBlue">
+              <div></div>
+              Considerations
+            </h5>
+          </div>
+          <div class="expandContent considerations">
+            <ul>
+              <li>
+                School Sport Survey used self-report methods, although, a major
+                strength of the School Sport Survey is its reach coverage, with
+                the 2015 survey being the largest to date and the largest survey
+                of its kind in the UK.
+              </li>
+              <li>
+                Although there is a lack of evidence on children of early years
+                (under 5 years old), there is strong evidence on all ages of
+                children and young people from 7 years old to 16 years old. This
+                was not available in the previous Report Card.
+              </li>
+              <li>
+                The best available evidence shows that in terms of Outdoor and
+                Active Play, Wales are only succeeding with about half of
+                children and young people. Research suggests that given the
+                opportunity, children get wide-ranging exercise as well as
+                significant mental health benefits from freely chosen play. All
+                children and young people need to play. Play is fundamental to
+                the healthy development and well-being of individuals and
+                communities, therefore encouragement towards getting children
+                outdoors playing is a necessity.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="wide">
+          <div class="expand blue">
+            <h5 class="light blue">
+              <div></div>
+              How to Improve
+            </h5>
+          </div>
+          <div class="expandContent improve">
+            <ul class="indent" aria-label="Play Wales">
+              <li>
+                Playing Out &#45;
+                <a
+                  href="http://playwales.org.uk/eng/playingout"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+              <li>
+                Promoting Physical Activity through Outdoor Play (early years)
+                &#45;
+                <a
+                  href="http://playwales.org.uk/login/uploaded/documents/INFORMATION%20SHEETS/Promoting%20physical%20activity%20through%20outdoor%20play%20in%20early%20years%20settings.pdf"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+            </ul>
+
+            <ul class="indent" aria-label="Change4Life">
+              <li>
+                Get Going &#45;
+                <a
+                  href="http://change4lifewales.org.uk/families/get-going-campaign/get-going/?lang=en"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+              <li>
+                Play4Life &#45;
+                <a
+                  href="http://www.nhs.uk/Change4Life/supporter-resources/downloads/297553_P4L_outdoor_acc2.pdf"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+            </ul>
+
+            <ul class="indent" aria-label="Sustrans Wales">
+              <li>
+                Free Range Kids Campaign &#45;
+                <a
+                  href="http://www.sustrans.org.uk/what-you-can-do/children-and-families"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+            </ul>
+
+            <ul class="indent" aria-label="Miscellaneous">
+              <li>
+                Playing Out &#45;
+                <a href="http://playingout.net/" target="_blank"> link </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="wide">
+          <div class="expand lightBlue">
+            <h5 class="light lightBlue">
+              <div></div>
+              Data Sources
+            </h5>
+          </div>
+          <div class="expandContent sources">
+            <ul class="indent" aria-label="Sport Wales">
+              <li>
+                School Sport Survey 2015 &#45;
+                <a
+                  href="http://sportwales.org.uk/research--policy/surveys-and-statistics/school-sport-survey.aspx"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+              <li>
+                Little Voices Shouting Out Report 2015 &#45;
+                <a
+                  href="https://www.swansea.ac.uk/media/Little%20Voices%20Report.pdf"
+                  target="_blank"
+                >
+                  link
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="wide">
+        <a href="/indicators/active-transport">
+          <div class="card yellow link nextIndicator">
+            <div class="grade grade-c">c</div>
+            <div class="cardTitle yellow">
+              <h6 class="lower">
+                Active Transportation
+                <span class="ui arrowRight">
+                  <svg
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="58.904px"
+                    height="18.471px"
+                    viewBox="0 0 58.904 18.471"
+                    enable-background="new 0 0 58.904 18.471"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <path
+                        fill="#fff"
+                        d="M58.604,9.92c0.401-0.376,0.401-0.993,0-1.369l-8.875-8.34C49.328-0.166,49-0.023,49,0.526v6.709
                                             c0,0.55-0.45,1-1,1H1c-0.55,0-1,0.45-1,1l0,0c0,0.55,0.45,1,1,1h47c0.55,0,1,0.45,1,1v6.709c0,0.55,0.328,0.692,0.729,0.315
-                                            L58.604,9.92z"/>
-                                    </g>
-                                </svg>
-                            </span>
-                        </h6>
-                    </div>
-                    <div class="cardIcon">
-                        <img class="yellow" src="/media/icons/activetransport-icon.svg">
-                    </div>
-
-                </div>
-            </a>
-        </div>
-        
-        
-        <div class="wide">
-            <a href="https://twitter.com/hashtag/AHKWales?src=hash" target="_blank">
-                <div class="twitterHashtag teal">
-                    <h6 class="lower light teal">
-                        &#35;AHKWales
-                    </h6>
-                </div>
-            </a>
-        </div>
-        <div class="preFooter-nav wide">
-            <div class="menuContent">
-                <div class="column navColumn">
-                    <a href="/home">
-                        Home
-                    </a>
-                    <a href="/report-card">
-                        Report Cards
-                    </a>
-                    <a href="/about">
-                        About
-                    </a>
-                </div>
-                <div class="column mapColumn">
-                    <a href="/maps/swanlinx/home" target="_blank">
-                        Swanlinx Map
-                    </a>
-                    <a href="/maps/dc/home" target="_blank">
-                        Dragon Challenge Map
-                    </a>
-                </div>
-            </div>
-        </div>
-        <footer class="wide">
-            <div class="footerInfo">
-                <i class="fa fa-copyright" aria-hidden="true"></i>
-                <span class="copyright">
-                    copyright 2016 &#124;
-                </span> 
-                <span class="siteBy">
-                     site by <a href="http://geoshepherds.com" target="_blank">geoshepherds</a>
-                </span>               
-            </div>
-            <div class="ui-BackToTop">
-               <span>
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-         width="18.47px" height="58.904px" viewBox="0 0 18.47 58.904" enable-background="new 0 0 18.47 58.904" xml:space="preserve">
-                        <g>
-                            <path fill="#299ad6" d="M9.919,0.3c-0.376-0.4-0.993-0.4-1.369,0L0.21,9.342c-0.376,0.4-0.234,0.896,0.315,0.896h6.709
-                                c0.55,0,1.334,0.116,1.334,0.666v47c0,0.55,0.45,1,1,1l0,0c0.55,0,1-0.45,1-1v-47c0-0.55,0.116-0.666,0.666-0.666h6.709
-                                c0.55,0,0.692-0.495,0.315-0.896L9.919,0.3z"/>
-                        </g>
-                    </svg>
+                                            L58.604,9.92z"
+                      />
+                    </g>
+                  </svg>
                 </span>
-                <div class="ui-content">
-                    back to top
-                </div>
-            </div> 
-        </footer>
-    
-    </div> <!-- closing container tag -->  
+              </h6>
+            </div>
+            <div class="cardIcon">
+              <img class="yellow" src="/media/icons/activetransport-icon.svg" />
+            </div>
+          </div>
+        </a>
+      </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="/scripts/indicators/outdoor.js"></script>
-<script src="/scripts/indicator.js"></script>
-<script src="/scripts/nav.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      <div class="wide">
+        <a href="https://twitter.com/hashtag/AHKWales?src=hash" target="_blank">
+          <div class="twitterHashtag teal">
+            <h6 class="lower light teal">&#35;AHKWales</h6>
+          </div>
+        </a>
+      </div>
+      <div class="preFooter-nav wide">
+        <div class="menuContent">
+          <div class="column navColumn">
+            <a href="/home"> Home </a>
+            <a href="/report-card"> Report Cards </a>
+            <a href="/about"> About </a>
+          </div>
+          <div class="column mapColumn">
+            <a href="/maps/swanlinx/home" target="_blank"> Swanlinx Map </a>
+            <a href="/maps/dc/home" target="_blank"> Dragon Challenge Map </a>
+          </div>
+        </div>
+      </div>
+      <footer class="wide">
+        <div class="footerInfo">
+          <i class="fa fa-copyright" aria-hidden="true"></i>
+          <span class="copyright"> copyright 2016 &#124; </span>
+          <span class="siteBy">
+            site by
+            <a href="http://geoshepherds.com" target="_blank">geoshepherds</a>
+          </span>
+        </div>
+        <div class="ui-BackToTop">
+          <span>
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="18.47px"
+              height="58.904px"
+              viewBox="0 0 18.47 58.904"
+              enable-background="new 0 0 18.47 58.904"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  fill="#299ad6"
+                  d="M9.919,0.3c-0.376-0.4-0.993-0.4-1.369,0L0.21,9.342c-0.376,0.4-0.234,0.896,0.315,0.896h6.709
+                                c0.55,0,1.334,0.116,1.334,0.666v47c0,0.55,0.45,1,1,1l0,0c0.55,0,1-0.45,1-1v-47c0-0.55,0.116-0.666,0.666-0.666h6.709
+                                c0.55,0,0.692-0.495,0.315-0.896L9.919,0.3z"
+                />
+              </g>
+            </svg>
+          </span>
+          <div class="ui-content">back to top</div>
+        </div>
+      </footer>
+    </div>
+    <!-- closing container tag -->
 
-  ga('create', 'UA-81271313-1', 'auto');
-  ga('send', 'pageview');
-</script>
-</body> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="/scripts/indicators/outdoor.js"></script>
+    <script src="/scripts/indicator.js"></script>
+    <script src="/scripts/nav.js"></script>
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
+      ga("create", "UA-81271313-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
 </html>
