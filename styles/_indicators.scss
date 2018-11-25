@@ -1,366 +1,366 @@
 .card.indicatorPage {
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  position: relative;
+  @media screen and (min-width: 1024px) {
+    height: 600px;
+  }
+  & .cardTitle > h6 {
+    text-align: center;
     width: 100%;
-    height: 100%;
-    cursor: default;
-    position: relative;
-    @media screen and (min-width: 1024px) {
-            height: 600px;
-        }
-    & .cardTitle > h6 {
-        text-align: center;
-        width: 100%;
-        padding-left: 0;
+    padding-left: 0;
+  }
+  .cardIcon {
+    position: absolute;
+    top: 124px;
+    right: 24px;
+    height: 50px;
+    width: 50px;
+    @media screen and (min-width: 768px) {
+      height: 80px;
+      width: 80px;
     }
-    .cardIcon {
-        position: absolute;
-        top: 124px;
-        right: 24px;
-        height: 50px;
-        width: 50px;
-        @media screen and (min-width: 768px) {
-            height: 80px;
-            width: 80px;
-        }
-        & img {
-            height: 50px;
-            width: 50px;
-            @include iconShadow($green, $yellow, $orange, $red);
-            @media screen and (min-width: 768px) and (max-width: 1200px) {
-                height: 60px;
-                width: 60px;
-            }
-            @media screen and (min-width: 1200px) {
-                height: 80px;
-                width: 80px;
-            }
-        }
+    & img {
+      height: 50px;
+      width: 50px;
+      @include iconShadow($green, $yellow, $orange, $red);
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        height: 60px;
+        width: 60px;
+      }
+      @media screen and (min-width: 1200px) {
+        height: 80px;
+        width: 80px;
+      }
     }
+  }
 }
 
 .card.nextIndicator {
-    width: 100%;
+  width: 100%;
 }
 
 span.underline {
-    text-decoration: underline;
-    font-weight: 700;
-    cursor: default;
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: default;
 }
 span.bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 span.italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 a.textLink {
-    color: $darkBlue;
+  color: $darkBlue;
 }
 
 .wrapper.rm {
-    margin: 56px auto;
+  margin: 56px auto;
 }
 
 .rmView {
-    display: none;
-    width: 100%;
-    background: $white;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    left: 0;    
-    z-index: 1000;
-    overflow-y: scroll;
-    &.active {
-        display: block;
+  display: none;
+  width: 100%;
+  background: $white;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: scroll;
+  &.active {
+    display: block;
+  }
+  & > ol.dataList {
+    width: 90%;
+    display: table;
+    margin: 28px auto;
+    position: relative;
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 70%;
     }
-    & > ol.dataList {
-        width: 90%;
-        display: table;
-        margin: 28px auto;
-        position: relative;
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
-           width: 70%;
-        }
-        @media screen and (min-width: 1024px) {
-            width: 80%;
-            max-width: 1100px;
-        }
-        & > li {
-            width: 100%;
-            padding: 14px 0;
-            @media screen and (min-width: 1024px) {
-                width: 50%;
-                padding: 28px 56px;
-                display: table-cell;
-            }
-            & > span {
-                width: 100%;
-                color: $blue;
-                font-size: 60px;
-                line-height: 1;
-                font-family: 'Cantarell';
-                font-weight: 400;
-                text-align: center;
-                @media screen and (min-width: 1024px) {
-                    width: 50%;
-                }
-            }
-            & > p {
-                padding-top: 28px;
-                font-size: $mobileFont * 0.86;                    
-            }
-        }
-        & > li.break {
-            display: table-row;
-        }
-        & > li.only {
-            width: 100%;
-            padding: 14px 0;
-            @media screen and (min-width: 1024px) {
-                width: 80%;
-                padding: 28px 56px;
-                display: table-cell;
-            }
-        }
+    @media screen and (min-width: 1024px) {
+      width: 80%;
+      max-width: 1100px;
     }
-    & > .closeRM {
+    & > li {
+      width: 100%;
+      padding: 14px 0;
+      @media screen and (min-width: 1024px) {
+        width: 50%;
+        padding: 28px 56px;
+        display: table-cell;
+      }
+      & > span {
+        width: 100%;
+        color: $blue;
+        font-size: 60px;
+        line-height: 1;
+        font-family: "Cantarell";
+        font-weight: 400;
         text-align: center;
-        cursor: pointer;
-        & > h6 {
-            font-size: $mobileFont;
-            color: $blue;
+        @media screen and (min-width: 1024px) {
+          width: 50%;
         }
-        & > div {
-            background: url(/media/icons/closeBtn.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            height: 20px;
-            width: 20px;
-            margin: 7px auto;
-        }
+      }
+      & > p {
+        padding-top: 28px;
+        font-size: $mobileFont * 0.86;
+      }
     }
+    & > li.break {
+      display: table-row;
+    }
+    & > li.only {
+      width: 100%;
+      padding: 14px 0;
+      @media screen and (min-width: 1024px) {
+        width: 80%;
+        padding: 28px 56px;
+        display: table-cell;
+      }
+    }
+  }
+  & > .closeRM {
+    text-align: center;
+    cursor: pointer;
+    & > h6 {
+      font-size: $mobileFont;
+      color: $blue;
+    }
+    & > div {
+      background: url(/media/icons/closeBtn.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      height: 20px;
+      width: 20px;
+      margin: 7px auto;
+    }
+  }
 }
 
-
-    
-
-
 div.expand {
-    height: 80px;
-    position: relative;
-    color: $white;
-    cursor: pointer;
-    @include bgColor($darkBlue);
-    @include bgColor($blue);
-    @include bgColor($lightBlue);
-    @include bgColor($xtraDarkBlue);
-    & > h5 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 300px;
-        @include shortShadow($darkBlue);
-        @include shortShadow($blue);
-        @include shortShadow($lightBlue);
-        @include shortShadow($xtraDarkBlue);
-        & > div {
-            background: url(/media/icons/uiarrow-accordion.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            width: 14px;
-            height: 14px;
-            display: inline-block;
-            margin-right: 10px;
-            &.rotate {
-                transform: rotate(90deg);
-                transform-origin: center center;
-            }
-        }
+  height: 80px;
+  position: relative;
+  color: $white;
+  cursor: pointer;
+  @include bgColor($darkBlue);
+  @include bgColor($blue);
+  @include bgColor($lightBlue);
+  @include bgColor($xtraDarkBlue);
+  & > h5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    @include shortShadow($darkBlue);
+    @include shortShadow($blue);
+    @include shortShadow($lightBlue);
+    @include shortShadow($xtraDarkBlue);
+    & > div {
+      background: url(/media/icons/uiarrow-accordion.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      margin-right: 10px;
+      &.rotate {
+        transform: rotate(90deg);
+        transform-origin: center center;
+      }
     }
+  }
 }
 
 div.expandContent {
-    display: none;
+  display: none;
 }
 
 div.expandContent.open {
-    display: block;
-    color: $white;
-    & > ul, & > p {
-        padding: 14px 0 46px 0; 
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        @media screen and (min-width: 1200px) {
-            width: 55%;
-        }
+  display: block;
+  color: $white;
+  & > ul,
+  & p {
+    padding: 14px 0 46px 0;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 1200px) {
+      width: 55%;
     }
-    & > ul {
-        list-style: disc inside;
-        &:before {
-            content: attr(aria-label);
-            font-size: $mobileFont * 1.4;
-            font-weight: 700;
-        }
-        & > li {
-            padding-bottom: 28px;
-        }
-        &.indent {
-            width: 70%;
-            @media screen and (min-width: 768px) {
-                width: 37%;
-            }
-            & > li {
-            padding-top: 14px;
-            padding-bottom: 0;
-                & > a, & > a:visited {
-                    border-bottom: 2.5px dotted $blueGray;
-                    text-decoration: none;
-                    color: $blueGray;
-                    cursor: pointer;
-                    transition: all .3s ease-in-out;
-                }
-                & > a:hover {
-                    border-bottom-color: #fff;
-                    transition: all .3s ease-in-out;
-                }
-            }
-        } 
+  }
+  & > ul {
+    list-style: disc inside;
+    &:before {
+      content: attr(aria-label);
+      font-size: $mobileFont * 1.4;
+      font-weight: 700;
     }
+    & > li {
+      padding-bottom: 28px;
+    }
+    &.indent {
+      width: 70%;
+      @media screen and (min-width: 768px) {
+        width: 37%;
+      }
+      & > li {
+        padding-top: 14px;
+        padding-bottom: 0;
+        & > a,
+        & > a:visited {
+          border-bottom: 2.5px dotted $blueGray;
+          text-decoration: none;
+          color: $blueGray;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+        & > a:hover {
+          border-bottom-color: #fff;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
 }
 
-div.expandContent.grade, div.expandContent.grade > p {
-    background: $xtraDarkBlue;
-    color: $white;
-    margin-bottom: 0;
+div.expandContent.grade,
+div.expandContent.grade p {
+  background: $xtraDarkBlue;
+  color: $white;
+  margin-bottom: 0;
 }
 
-div.expandContent.considerations {
-    background: $darkBlue;
+div.expandContent.considerations,
+div.expandContent.open.considerations p {
+  background: $darkBlue;
+  color: $white;
 }
 
 div.expandContent.improve {
-    background: $blue;
+  background: $blue;
 }
 
 div.expandContent.sources {
-    background: $lightBlue;
+  background: $lightBlue;
 }
 
 // Indicator Link Styles
 
 .image {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 100%;
-    height: 320px;
-    margin-bottom: 84px;
-    opacity: .85;
-    transition: opacity .3s ease-in-out;
-    &#swanlinx {
-        background-image: url(/media/images/swanlinx.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 320px;
+  margin-bottom: 84px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease-in-out;
+  &#swanlinx {
+    background-image: url(/media/images/swanlinx.jpg);
+  }
+  &#dragonChallenge {
+    background-image: url(/media/images/dragon_challenge.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    height: 420px;
+    &:hover {
+      opacity: 1;
     }
-    &#dragonChallenge {
-        background-image: url(/media/images/dragon_challenge.jpg);
-    }
-    @media screen and (min-width: 768px) {
-        height: 420px;
-        &:hover {
-            opacity: 1;
-        }
-    }
+  }
 }
-
-
 
 // Chart Styles
 
 #chart {
-    height: 360px;
-    width: 90%;
-    padding: 0;
-    margin-top: 28px;
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-        height: 380px;
-        margin-top: 42px;
+  height: 360px;
+  width: 90%;
+  padding: 0;
+  margin-top: 28px;
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    height: 380px;
+    margin-top: 42px;
+  }
+  @media screen and (min-width: 1024px) {
+    height: 420px;
+    margin-top: 42px;
+  }
+  &.arc {
+    height: 320px;
+    @media screen and (min-width: 768px) {
+      height: 420px;
     }
-    @media screen and (min-width: 1024px) {
-        height: 420px;
-        margin-top: 42px;            
-    }
-    &.arc {
-        height: 320px;
-        @media screen and (min-width: 768px) {
-            height: 420px;
-        }
-    }
+  }
 }
 .chart-title {
-    margin-bottom: 0;
-    color: $blue;
+  margin-bottom: 0;
+  color: $blue;
 }
 text.svgText {
-    font-size: 24px;
-    font-weight: 700;
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-        font-size: 28px;
+  font-size: 24px;
+  font-weight: 700;
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 32px;
+  }
+  &#value {
+    fill: $blue;
+  }
+  &#barVal {
+    fill: $blue;
+    font-size: 22px;
+  }
+  &#barHead {
+    fill: $white;
+    font-size: 12px;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
     }
-    @media screen and (min-width: 1024px) {
-        font-size: 32px;
-    }
-    &#value {
-        fill: $blue;
-    }
-    &#barVal {
-        fill: $blue;
-        font-size: 22px;
-    }
-    &#barHead {
-        fill: $white;
-        font-size: 12px;
-        @media screen and (min-width: 768px) {
-            font-size: 14px;
-        }
-    }
-    &#commVal {
-        fill: $white;
-    }
+  }
+  &#commVal {
+    fill: $white;
+  }
 }
 tspan {
-    font-size: 12px;
-    font-weight: 400;
+  font-size: 12px;
+  font-weight: 400;
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 16px;
+  }
+  &.sub-text,
+  &.sub-text2 {
+    font-size: 10px;
     @media screen and (min-width: 768px) and (max-width: 1024px) {
-        font-size: 14px;
+      font-size: 12px;
     }
     @media screen and (min-width: 1024px) {
-        font-size: 16px;
+      font-size: 14px;
     }
-    &.sub-text, &.sub-text2 {
-        font-size: 10px;
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
-            font-size: 12px;
-        }
-        @media screen and (min-width: 1024px) {
-            font-size: 14px;
-        }
-    }
+  }
 }
 .iconY {
-    fill: $blue;
+  fill: $blue;
 }
 .iconN {
-    fill: $blueGray;
-    opacity: .5;
+  fill: $blueGray;
+  opacity: 0.5;
 }
 
 rect.bar {
-    fill: $blue;
+  fill: $blue;
 }
 
 .axis path,
@@ -370,8 +370,8 @@ rect.bar {
   shape-rendering: crispEdges;
 }
 .axis text {
-    font-size: 12px;
-    fill: $blueGray;
+  font-size: 12px;
+  fill: $blueGray;
 }
 
 .line {
